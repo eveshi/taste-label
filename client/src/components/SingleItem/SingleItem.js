@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 const SingleItem = (props) => {
   const {
     albumCoverSrc,
+    ranking,
     albumName,
     musician,
     year,
@@ -18,9 +19,14 @@ const SingleItem = (props) => {
         alt={albumName}
       />
       <div>
-        <p>
-          {albumName}
-        </p>
+        <div>
+          <p>
+            {ranking}
+          </p>
+          <p>
+            {albumName}
+          </p>
+        </div>
         <p>
           {musician}
         </p>
@@ -42,6 +48,7 @@ const SingleItem = (props) => {
 
 SingleItem.propTypes = {
   albumCoverSrc: PropTypes.string.isRequired,
+  ranking: PropTypes.string.isRequired,
   albumName: PropTypes.string.isRequired,
   musician: PropTypes.string.isRequired,
   year: PropTypes.string.isRequired,
