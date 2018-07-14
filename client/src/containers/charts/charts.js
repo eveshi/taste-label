@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import SingleItem from '../../components/SingleItem/SingleItem';
 
-class charts extends PureComponent {
+class Charts extends PureComponent {
   state = {
     album: {
       albumCoverSrc: 'https://en.wikipedia.org/wiki/Ten_New_Songs#/media/File:LeonardCohenTenNewSongs.jpg',
@@ -30,4 +30,4 @@ class charts extends PureComponent {
   }
 }
 
-export default charts;
+export default Charts;
