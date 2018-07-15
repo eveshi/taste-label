@@ -4,7 +4,7 @@ import SingleItem from '../../components/SingleItem/SingleItem';
 class Charts extends PureComponent {
   state = {
     album: {
-      albumCoverSrc: 'https://en.wikipedia.org/wiki/Ten_New_Songs#/media/File:LeonardCohenTenNewSongs.jpg',
+      albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
       ranking: '01',
       albumName: 'Ten New Songs',
       musician: 'Leonard Cohen',
