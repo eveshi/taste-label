@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import search from '../../assets/icon/search.svg';
 import home from '../../assets/icon/home.svg';
 import user from '../../assets/icon/user.svg';
+import classes from './ToolBar.css';
 
 class ToolBar extends PureComponent {
   state = {
@@ -28,7 +29,7 @@ class ToolBar extends PureComponent {
     } = this.state;
     const { children } = this.props;
     return (
-      <div>
+      <div className={classes.toolBar}>
         <div>
           <img
             src={searchIcon.src}
@@ -50,7 +51,7 @@ class ToolBar extends PureComponent {
 }
 
 ToolBar.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default ToolBar;
