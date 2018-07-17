@@ -1,6 +1,31 @@
 @import '../../stylesheets/main.scss';
 
 .toolBar {
-  background-color: $color-primary-5;
-  height: 80px;
+  background-color: $color-primary-4;
+  height: 5rem;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 0 2px 4px $color-primary-6;
+  z-index: $layer-top;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  & > * {
+    margin: auto 1rem;
+  }
+
+  &__icon {
+    font-size: 3rem;
+  }
+
+  &__menu {
+    img{
+      margin-left: 1rem;
+      height: 3rem;
+    }
+  }
 }

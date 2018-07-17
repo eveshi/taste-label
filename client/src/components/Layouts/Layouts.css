@@ -9,3 +9,7 @@ html {
 
 body {
   box-sizing: border-box; }
+
+.layouts {
+  width: 100%;
+  position: relative; }
