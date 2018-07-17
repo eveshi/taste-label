@@ -1,0 +1,32 @@
+// for responsive design:
+// phone size: < 600px
+// tablet horizon size: 600 ~ 900px
+// tablet vertical size: 900 ~ 1200px
+// normal desktop size
+// big screen destop: > 1800px
+
+@mixin  response($screenType) {
+  @if ($screenType == 'tablet-vertical') {
+    @media (max-width:1200px) {
+      @content;
+    }
+  }
+
+  @if ($screenType == 'tablet-horizon') {
+    @media (max-width:900px) {
+      @content;
+    }
+  }
+
+  @if ($screenType == 'phone') {
+    @media (max-width:600px) {
+      @content;
+    }
+  }
+
+  @if ($screenType == 'big-screen') {
+    @media (max-width:1800px) {
+      @content;
+    }
+  }
+}

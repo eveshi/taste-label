@@ -1,0 +1,41 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+.searchBox {
+  height: inherit;
+  width: 20vw;
+  position: relative; }
+  .searchBox__input {
+    background-color: rgba(1, 3, 35, 0.4);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    z-index: 101; }
+    .searchBox__input_hidden {
+      display: none; }
+  .searchBox__button_left, .searchBox__button_right {
+    height: inherit;
+    position: absolute;
+    z-index: 102;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none; }
+  .searchBox__button_left {
+    top: 0;
+    left: 0; }
+  .searchBox__button_right {
+    top: 0;
+    left: 20vw; }

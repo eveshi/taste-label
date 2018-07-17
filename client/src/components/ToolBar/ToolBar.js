@@ -1,24 +1,36 @@
 import React, { PureComponent } from 'react';
-import search from '../../assets/icon/search.svg';
 import user from '../../assets/icon/user.svg';
+import SearchBox from '../SearchBox/SearchBox';
 import classes from './ToolBar.css';
 
 class ToolBar extends PureComponent {
   state = {
-    searchIcon: {
-      src: search,
-      alt: 'search icon',
-    },
-    userIcon: {
-      src: user,
-      alt: 'user icon',
-    },
+    searchValue: '',
+    showSearchBox: false,
+  }
+
+  searchChangeHandler = (event) => {
+    const { value } = event.target;
+    this.setState({
+      searchValue: value,
+    });
+  }
+
+  searchClickHandler = () => {
+    const { showSearchBox } = this.state;
+    this.setState({
+      showSearchBox: !showSearchBox,
+    });
   }
 
   render() {
     const {
-      searchIcon,
-      userIcon,
+      searchChangeHandler,
+      searchClickHandler,
+    } = this;
+    const {
+      searchValue,
+      showSearchBox,
     } = this.state;
     return (
       <div className={classes.toolBar}>
@@ -28,13 +40,16 @@ class ToolBar extends PureComponent {
           </p>
         </div>
         <div className={classes.toolBar__menu}>
-          <img
-            src={searchIcon.src}
-            alt={searchIcon.alt}
+          <SearchBox
+            onChange={searchChangeHandler}
+            onClick={searchClickHandler}
+            placeholder="Album/Song/Artist"
+            showSearchBox={showSearchBox}
+            value={searchValue}
           />
           <img
-            src={userIcon.src}
-            alt={userIcon.alt}
+            src={user}
+            alt="user"
           />
         </div>
       </div>

@@ -1,0 +1,45 @@
+@import '../../stylesheets/main.scss';
+
+.searchBox {
+  height: inherit;
+  width: 20vw;
+  position: relative;
+
+  &__input {
+    background-color: rgba($color-primary-3, 0.4);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    z-index: 101;
+
+    &_hidden {
+      display: none;
+    }
+  }
+
+  &__button {
+    &_left,
+    &_right {
+      height: inherit;
+      position: absolute;
+      z-index: 102;
+      border: none;
+      background-color: rgba(#000000, 0);
+      outline: none;
+    }
+
+    &_left {
+      top: 0;
+      left: 0;
+    }
+
+    &_right {
+      top: 0;
+      left: 20vw
+    }
+  }
+}
