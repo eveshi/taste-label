@@ -5,28 +5,35 @@
 // normal desktop size
 // big screen destop: > 1800px
 
-@mixin  response($screenType) {
+@mixin responsive($screenType) {
   @if ($screenType == 'tablet-vertical') {
-    @media (max-width:1200px) {
+    @media only screen and (max-width:1200px) {
       @content;
     }
   }
 
   @if ($screenType == 'tablet-horizon') {
-    @media (max-width:900px) {
+    @media only screen and (max-width:900px) {
       @content;
     }
   }
 
   @if ($screenType == 'phone') {
-    @media (max-width:600px) {
+    @media only screen and (max-width:600px) {
       @content;
     }
   }
 
   @if ($screenType == 'big-screen') {
-    @media (max-width:1800px) {
+    @media only screen and (max-width:1800px) {
       @content;
     }
+  }
+}
+
+// transition-timing
+@mixin transitionSpeed($speed) {
+  @if ($speed == 'middle') {
+    transition: all .5s ease;
   }
 }

@@ -1,13 +1,13 @@
 @import '../../stylesheets/main.scss';
 
 .toolBar {
-  background-color: $color-primary-4;
-  height: 5rem;
+  background-color: $color-primary-light;
+  height: $toolBar-height;
   width: 100%;
   position: fixed;
   left: 0;
   top: 0;
-  box-shadow: 0 2px 4px $color-primary-6;
+  border-bottom: 1px solid $color-primary-middle;
   z-index: $layer-top;
   display: flex;
   flex-direction: row;
@@ -19,13 +19,17 @@
   }
 
   &__icon {
-    font-size: 3rem;
+    font-size: $toolBar-item-size;
   }
 
   &__menu {
-    img{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & > * {
       margin-left: 1rem;
-      height: 3rem;
+      height: $toolBar-item-size;
     }
   }
 }

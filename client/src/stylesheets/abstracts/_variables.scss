@@ -1,10 +1,12 @@
 // color
-$color-primary-1: #027D76;
-$color-primary-2: #FF8AD4;
-$color-primary-3: #010323;
-$color-primary-4: #FFFDFE;
-$color-primary-5: #F8382B;
-$color-primary-6: #B0B1C2;
+$color-primary-light: #FFFDFE;
+$color-primary-middle: #B0B1C2;
+$color-primary-dark: #010323;
+
+$color-red-light: #FF8AD4;
+$color-red-dark: #F8382B;
+
+$color-green: #027D76;
 
 // font
 $default-font-size: 1.6rem;
@@ -12,3 +14,8 @@ $default-font-size: 1.6rem;
 // layer
 $layer-top: 100; // for ToolBar
 $layer-bottom: 0; // basic background
+
+// size
+$toolBar-height: 5rem;
+$toolBar-item-size: 3rem;
+$searchBox-length: 27rem;

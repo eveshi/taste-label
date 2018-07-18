@@ -1,45 +1,171 @@
 @import '../../stylesheets/main.scss';
 
 .searchBox {
-  height: inherit;
-  width: 20vw;
+  height: $toolBar-item-size;
+  width: $searchBox-length;
   position: relative;
 
-  &__input {
-    background-color: rgba($color-primary-3, 0.4);
+  &__input,
+  &__input_hidden {
+    background-image: linear-gradient(120deg,
+                                      rgba($color-red-light, 0.3) 0%,
+                                      rgba($color-red-light, 0.3) 50%,
+                                      $color-primary-light 50%);
     border-radius: 0.5rem;
-    padding: 1rem;
+    border: none;
+    font-size: 1.2rem;
+    height: 120%;
     position: absolute;
-    top: 0;
-    left: 0;
+    padding-left: $toolBar-item-size+2rem;
+    top: -10%;
+    right: 0;
     overflow: hidden;
+    outline: none;
     width: 100%;
-    z-index: 101;
+    z-index: $layer-top+1;
+    background-size: 220%;
+    @include transitionSpeed(middle);
+  }
 
-    &_hidden {
-      display: none;
-    }
+  // for animation
+  &__input {
+    background-position: 185%;
+  }
+
+  &__input_hidden {
+    background-position: 100%;
   }
 
   &__button {
     &_left,
     &_right {
-      height: inherit;
       position: absolute;
-      z-index: 102;
+      z-index: $layer-top+2;
       border: none;
       background-color: rgba(#000000, 0);
       outline: none;
+      top: 0;
+      @include transitionSpeed(middle);
+
+      img {
+        height: $toolBar-item-size;
+      }
+
+      // for animation
+      &::before{
+        content: '';
+        position: absolute;
+        top: -10%;
+        height: 120%;
+        background-color: $color-primary-light;
+        @include transitionSpeed(middle);
+      }
     }
 
-    &_left {
-      top: 0;
-      left: 0;
+    &_left { 
+      right: $searchBox-length+(-1rem-$toolBar-item-size);
+      
+      img {
+        opacity: 0.6;
+      }
+
+      &::before{
+        width: 0rem;
+        right: $toolBar-item-size+1rem;
+      }
     }
 
     &_right {
-      top: 0;
-      left: 20vw
+      right: 0;
+
+      &::before{
+        width: $searchBox-length;
+        right: $toolBar-item-size;
+      }
+    }
+  }
+
+  @include responsive(phone) {
+    & {
+      width: 100vw;
+    }
+
+    &__input,
+    &__input_hidden {
+      background-image: linear-gradient(120deg,
+                                        rgba($color-red-light, 0.3) 0%,
+                                        rgba($color-red-light, 0.3) 50%,
+                                        $color-primary-light 50%);
+      border: none;
+      font-size: 1.2rem;
+      height: $toolBar-item-size*1.2;
+      position: absolute;
+      top: ($toolBar-height+$toolBar-item-size)/2;
+      right: $toolBar-height*3;
+      overflow: hidden;
+      outline: none;
+      width: 100%;
+      z-index: $layer-top+1;
+      background-size: 220%;
+      @include transitionSpeed(middle);
+    }
+  
+    // for animation
+    &__input {
+      background-position: 185%;
+    }
+  
+    &__input_hidden {
+      background-position: 100%;
+    }
+  
+    &__button {
+      &_left,
+      &_right {
+        position: absolute;
+        z-index: $layer-top+2;
+        border: none;
+        background-color: rgba(#000000, 0);
+        outline: none;
+        top: 0;
+        @include transitionSpeed(middle);
+  
+        img {
+          height: $toolBar-item-size;
+        }
+  
+        // for animation
+        &::before{
+          content: '';
+          position: absolute;
+          top: -10%;
+          height: 120%;
+          background-color: $color-primary-light;
+          @include transitionSpeed(middle);
+        }
+      }
+  
+      &_left { 
+        right: $searchBox-length+1rem;
+        
+        img {
+          opacity: 0.6;
+        }
+  
+        &::before{
+          width: 0rem;
+          right: $toolBar-item-size+1rem;
+        }
+      }
+  
+      &_right {
+        right: 0;
+  
+        &::before{
+          width: $searchBox-length;
+          right: $toolBar-item-size;
+        }
+      }
     }
   }
 }
