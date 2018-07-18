@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
+import home from '../../assets/icon/home.svg';
 import user from '../../assets/icon/user.svg';
 import SearchBox from '../SearchBox/SearchBox';
+import ToolBarLink from '../ToolBarLink/ToolBarLink';
 import classes from './ToolBar.css';
 
 class ToolBar extends PureComponent {
@@ -47,8 +49,14 @@ class ToolBar extends PureComponent {
             showSearchBox={showSearchBox}
             value={searchValue}
           />
-          <img
-            src={user}
+          <ToolBarLink
+            to="/"
+            imgSrc={home}
+            alt="home"
+          />
+          <ToolBarLink
+            to="/"
+            imgSrc={user}
             alt="user"
           />
         </div>

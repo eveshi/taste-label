@@ -26,10 +26,32 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: $toolBar-item-size;
 
     & > * {
       margin-left: 1rem;
-      height: $toolBar-item-size;
+      display: flex;
+      align-items: center;
+      height: inherit;
+
+      img {
+        height: $toolBar-item-size;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0.9*$toolBar-height;
+        height: 4px;
+        width: 0;
+        background-color:$color-red-light;
+        @include transitionSpeed(fast);
+      }
+
+      &:not(:first-child):hover::after {
+        width: $toolBar-item-size;
+      }
+
     }
   }
 }

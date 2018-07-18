@@ -33,6 +33,10 @@
 
 // transition-timing
 @mixin transitionSpeed($speed) {
+  @if ($speed == 'fast') {
+    transition: all .2s ease;
+  }
+
   @if ($speed == 'middle') {
     transition: all .5s ease;
   }

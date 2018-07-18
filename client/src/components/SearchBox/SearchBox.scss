@@ -46,9 +46,14 @@
       outline: none;
       top: 0;
       @include transitionSpeed(middle);
-
+      
       img {
-        height: $toolBar-item-size;
+        @include transitionSpeed(fast);
+    
+        &:hover,
+        &:active {
+          transform: scale(1.2);
+        }
       }
 
       // for animation
@@ -87,83 +92,46 @@
 
   @include responsive(phone) {
     & {
-      width: 100vw;
+      width: $toolBar-item-size;
     }
 
     &__input,
     &__input_hidden {
       background-image: linear-gradient(120deg,
                                         rgba($color-red-light, 0.3) 0%,
-                                        rgba($color-red-light, 0.3) 50%,
-                                        $color-primary-light 50%);
-      border: none;
-      font-size: 1.2rem;
-      height: $toolBar-item-size*1.2;
-      position: absolute;
-      top: ($toolBar-height+$toolBar-item-size)/2;
-      right: $toolBar-height*3;
-      overflow: hidden;
-      outline: none;
-      width: 100%;
-      z-index: $layer-top+1;
-      background-size: 220%;
-      @include transitionSpeed(middle);
+                                        rgba($color-red-light, 0.3) 100%,
+                                        $color-primary-light 0%);
+      border-radius: 0;
+      height: 1.2*$toolBar-item-size;
+      padding-left: 1rem;
+      position: fixed;
+      top: $toolBar-height;
+      width: 100vw;
+      z-index: $layer-top+(-1);
     }
   
     // for animation
     &__input {
-      background-position: 185%;
+      left: 0;
     }
   
     &__input_hidden {
-      background-position: 100%;
+      left: 100vw;
     }
   
     &__button {
       &_left,
       &_right {
-        position: absolute;
-        z-index: $layer-top+2;
-        border: none;
-        background-color: rgba(#000000, 0);
-        outline: none;
         top: 0;
-        @include transitionSpeed(middle);
+        right: 0;
   
         img {
-          height: $toolBar-item-size;
-        }
-  
-        // for animation
-        &::before{
-          content: '';
-          position: absolute;
-          top: -10%;
-          height: 120%;
-          background-color: $color-primary-light;
-          @include transitionSpeed(middle);
-        }
-      }
-  
-      &_left { 
-        right: $searchBox-length+1rem;
-        
-        img {
-          opacity: 0.6;
+          opacity: 1;
         }
   
         &::before{
           width: 0rem;
-          right: $toolBar-item-size+1rem;
-        }
-      }
-  
-      &_right {
-        right: 0;
-  
-        &::before{
-          width: $searchBox-length;
-          right: $toolBar-item-size;
+          height: 0rem;
         }
       }
     }
