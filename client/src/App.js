@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Layouts from './components/Layouts/Layouts';
-import Charts from './containers/charts/charts';
+import Home from './containers/Home/Home';
 
 const App = () => (
   <BrowserRouter>
     <Layouts>
-      <Route path="/" component={Charts} />
+      <Route path="/" component={Home} />
     </Layouts>
   </BrowserRouter>
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classes from './SingleItem.css';
 
 const SingleItem = (props) => {
   const {
     albumCoverSrc,
-    ranking,
     albumName,
     musician,
     year,
@@ -13,42 +13,36 @@ const SingleItem = (props) => {
   } = props;
 
   return (
-    <div>
-      <img
-        src={albumCoverSrc}
-        alt={albumName}
-      />
-      <div>
-        <div>
-          <p>
-            {ranking}
-          </p>
-          <p>
-            {albumName}
-          </p>
-        </div>
-        <p>
+    <div className={classes.singleItem}>
+      <div className={classes.singleItem__albumCover}>
+        <img
+          src={albumCoverSrc}
+          alt={albumName}
+        />
+        <p className={classes.singleItem__albumCover__rating}>
+          {rating}
+        </p>
+      </div>
+      <div className={classes.singleItem__description}>
+        <p className={classes.singleItem__description__musician}>
           {musician}
         </p>
-        <div>
-          <p>
-            {year}
-          </p>
-          <p>
-            {genres}
-          </p>
-        </div>
+        <p className={classes.singleItem__description__albumName}>
+          {albumName}
+        </p>
+        <p className={classes.singleItem__description__year}>
+          {year}
+        </p>
+        <p className={classes.singleItem__description__genres}>
+          {genres}
+        </p>
       </div>
-      <p>
-        {rating}
-      </p>
     </div>
   );
 };
 
 SingleItem.propTypes = {
   albumCoverSrc: PropTypes.string.isRequired,
-  ranking: PropTypes.string.isRequired,
   albumName: PropTypes.string.isRequired,
   musician: PropTypes.string.isRequired,
   year: PropTypes.string.isRequired,

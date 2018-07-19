@@ -8,8 +8,8 @@
   &__input,
   &__input_hidden {
     background-image: linear-gradient(120deg,
-                                      rgba($color-red-light, 0.3) 0%,
-                                      rgba($color-red-light, 0.3) 50%,
+                                      rgba($color-secondary-middle, 0.3) 0%,
+                                      rgba($color-secondary-middle, 0.3) 50%,
                                       $color-primary-light 50%);
     border-radius: 0.5rem;
     border: none;
@@ -47,7 +47,7 @@
       top: 0;
       @include transitionSpeed(middle);
       
-      img {
+      svg {
         @include transitionSpeed(fast);
     
         &:hover,
@@ -70,7 +70,7 @@
     &_left { 
       right: $searchBox-length+(-1rem-$toolBar-item-size);
       
-      img {
+      svg {
         opacity: 0.6;
       }
 
@@ -98,8 +98,8 @@
     &__input,
     &__input_hidden {
       background-image: linear-gradient(120deg,
-                                        rgba($color-red-light, 0.3) 0%,
-                                        rgba($color-red-light, 0.3) 100%,
+                                        rgba($color-secondary-middle, 0.3) 0%,
+                                        rgba($color-secondary-middle, 0.3) 100%,
                                         $color-primary-light 0%);
       border-radius: 0;
       height: 1.2*$toolBar-item-size;
@@ -125,7 +125,7 @@
         top: 0;
         right: 0;
   
-        img {
+        svg {
           opacity: 1;
         }
   

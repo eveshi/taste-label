@@ -20,12 +20,26 @@
 
   &__icon {
     font-size: $toolBar-item-size;
+    font-family: 'Coda Caption', sans-serif;
+
+    background-image: radial-gradient($color-secondary-middle, $color-secondary-dark 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    @supports ((-webkit-background-clip: text) or (background-clip: text)) {
+      color: $color-secondary-dark;
+    }
+
+    @include responsive(phone) {
+      font-size: $toolBar-item-size*0.7;
+    }
   }
 
   &__menu {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    // align-items: center;
     height: $toolBar-item-size;
 
     & > * {
@@ -34,8 +48,10 @@
       align-items: center;
       height: inherit;
 
-      img {
+      svg {
         height: $toolBar-item-size;
+        width: $toolBar-item-size;
+        fill: $color-secondary-dark;
       }
 
       &::after {
@@ -44,7 +60,7 @@
         top: 0.9*$toolBar-height;
         height: 4px;
         width: 0;
-        background-color:$color-red-light;
+        background-color:$color-secondary-dark;
         @include transitionSpeed(fast);
       }
 

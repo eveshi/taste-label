@@ -8,12 +8,15 @@
 html {
   font-size: 62.5%; }
 
+body {
+  font-family: 'Ubuntu', sans-serif; }
+
 .searchBox {
   height: 3rem;
   width: 27rem;
   position: relative; }
   .searchBox__input, .searchBox__input_hidden {
-    background-image: linear-gradient(120deg, rgba(255, 138, 212, 0.3) 0%, rgba(255, 138, 212, 0.3) 50%, #FFFDFE 50%);
+    background-image: linear-gradient(120deg, rgba(222, 205, 167, 0.3) 0%, rgba(222, 205, 167, 0.3) 50%, #F5F5F4 50%);
     border-radius: 0.5rem;
     border: none;
     font-size: 1.2rem;
@@ -40,20 +43,20 @@ html {
     outline: none;
     top: 0;
     transition: all .5s ease; }
-    .searchBox__button_left img, .searchBox__button_right img {
+    .searchBox__button_left svg, .searchBox__button_right svg {
       transition: all .2s ease; }
-      .searchBox__button_left img:hover, .searchBox__button_left img:active, .searchBox__button_right img:hover, .searchBox__button_right img:active {
+      .searchBox__button_left svg:hover, .searchBox__button_left svg:active, .searchBox__button_right svg:hover, .searchBox__button_right svg:active {
         transform: scale(1.2); }
     .searchBox__button_left::before, .searchBox__button_right::before {
       content: '';
       position: absolute;
       top: -10%;
       height: 120%;
-      background-color: #FFFDFE;
+      background-color: #F5F5F4;
       transition: all .5s ease; }
   .searchBox__button_left {
     right: 23rem; }
-    .searchBox__button_left img {
+    .searchBox__button_left svg {
       opacity: 0.6; }
     .searchBox__button_left::before {
       width: 0rem;
@@ -67,7 +70,7 @@ html {
     .searchBox {
       width: 3rem; }
     .searchBox__input, .searchBox__input_hidden {
-      background-image: linear-gradient(120deg, rgba(255, 138, 212, 0.3) 0%, rgba(255, 138, 212, 0.3) 100%, #FFFDFE 0%);
+      background-image: linear-gradient(120deg, rgba(222, 205, 167, 0.3) 0%, rgba(222, 205, 167, 0.3) 100%, #F5F5F4 0%);
       border-radius: 0;
       height: 3.6rem;
       padding-left: 1rem;
@@ -82,7 +85,7 @@ html {
     .searchBox__button_left, .searchBox__button_right {
       top: 0;
       right: 0; }
-      .searchBox__button_left img, .searchBox__button_right img {
+      .searchBox__button_left svg, .searchBox__button_right svg {
         opacity: 1; }
       .searchBox__button_left::before, .searchBox__button_right::before {
         width: 0rem;

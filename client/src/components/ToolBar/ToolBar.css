@@ -8,14 +8,17 @@
 html {
   font-size: 62.5%; }
 
+body {
+  font-family: 'Ubuntu', sans-serif; }
+
 .toolBar {
-  background-color: #FFFDFE;
+  background-color: #F5F5F4;
   height: 5rem;
   width: 100%;
   position: fixed;
   left: 0;
   top: 0;
-  border-bottom: 1px solid #B0B1C2;
+  border-bottom: 1px solid #A5A4A2;
   z-index: 100;
   display: flex;
   flex-direction: row;
@@ -24,26 +27,38 @@ html {
   .toolBar > * {
     margin: auto 1rem; }
   .toolBar__icon {
-    font-size: 3rem; }
+    font-size: 3rem;
+    font-family: 'Coda Caption', sans-serif;
+    background-image: radial-gradient(#DECDA7, #BD924B 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; }
+    @supports (-webkit-background-clip: text) or (background-clip: text) {
+      .toolBar__icon {
+        color: #BD924B; } }
+    @media only screen and (max-width: 600px) {
+      .toolBar__icon {
+        font-size: 2.1rem; } }
   .toolBar__menu {
     display: flex;
     flex-direction: row;
-    align-items: center;
     height: 3rem; }
     .toolBar__menu > * {
       margin-left: 1rem;
       display: flex;
       align-items: center;
       height: inherit; }
-      .toolBar__menu > * img {
-        height: 3rem; }
+      .toolBar__menu > * svg {
+        height: 3rem;
+        width: 3rem;
+        fill: #BD924B; }
       .toolBar__menu > *::after {
         content: '';
         position: absolute;
         top: 4.5rem;
         height: 4px;
         width: 0;
-        background-color: #FF8AD4;
+        background-color: #BD924B;
         transition: all .2s ease; }
       .toolBar__menu > *:not(:first-child):hover::after {
         width: 3rem; }

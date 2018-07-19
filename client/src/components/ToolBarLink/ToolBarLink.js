@@ -5,24 +5,19 @@ import PropTypes from 'prop-types';
 const ToolBarLink = (props) => {
   const {
     to,
-    imgSrc,
-    alt,
+    children,
   } = props;
 
   return (
     <Link to={to}>
-      <img
-        src={imgSrc}
-        alt={alt}
-      />
+      {children}
     </Link>
   );
 };
 
 ToolBarLink.propTypes = {
   to: PropTypes.string.isRequired,
-  imgSrc: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
+  children: PropTypes.element.isRequired,
 };
 
 export default ToolBarLink;

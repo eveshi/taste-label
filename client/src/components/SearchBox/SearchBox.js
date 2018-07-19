@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import search from '../../assets/icon/search.svg';
+import Search from '../../assets/icon/search';
 import classes from './SearchBox.css';
 
 const SearchBox = (props) => {
@@ -34,10 +34,7 @@ const SearchBox = (props) => {
         type="button"
         onClick={onClick}
       >
-        <img
-          src={search}
-          alt="search"
-        />
+        <Search />
       </button>
     </div>
   );
