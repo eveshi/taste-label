@@ -1,0 +1,49 @@
+@import '../../stylesheets/main.scss';
+
+.footer {
+  background-color: $color-primary-dark;
+  color: $color-secondary-dark;
+  font-size: 1.4rem;
+  padding-top: 4rem;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  & > * {
+    min-width: 22rem;
+
+    p:not(:last-child) {
+      border-bottom: 2px solid $color-secondary-dark;
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__links {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    padding-bottom: 4rem;
+    justify-items: flex-start;
+
+    p {
+      grid-row: 1 / 2;
+      grid-column: 1 / -1;
+    }
+
+    a {
+      text-decoration: none;
+      color: $color-secondary-dark;
+    }
+  }
+
+  &__copyright {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem;
+    padding-bottom: 4rem;
+    justify-items: flex-start;
+  }
+}

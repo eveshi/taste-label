@@ -15,7 +15,15 @@ class Charts extends PureComponent {
         <Intro />
         <ChartRow
           list={list}
-          chartName="Latest"
+          chartName="Latest Album"
+        />
+        <ChartRow
+          list={list}
+          chartName="New Best Album"
+        />
+        <ChartRow
+          list={list}
+          chartName="New Best Singles"
         />
       </div>
     );

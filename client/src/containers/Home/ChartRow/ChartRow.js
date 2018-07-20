@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SingleItem from '../../../components/SingleItem/SingleItem';
-import classes from './ChartRow.scss';
+import classes from './ChartRow.css';
 
 const ChartRow = (props) => {
   const {
@@ -22,10 +22,14 @@ const ChartRow = (props) => {
 
   return (
     <div className={classes.chartRow}>
-      <p>
-        {chartName}
-      </p>
-      {itemList}
+      <div className={classes.chartRow__header}>
+        <p>
+          {chartName}
+        </p>
+      </div>
+      <div className={classes.chartRow__items}>
+        {itemList}
+      </div>
     </div>
   );
 };
