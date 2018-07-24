@@ -82,7 +82,7 @@ const AlbumInfo = (props) => {
         </div>
         <div className={classes.albumInfo__rightbar__description}>
           <p className={classes.albumInfo__rightbar__description__title}>
-            Introduction
+            Introduction:
           </p>
           <p className={classes.albumInfo__rightbar__description__content}>
             {description}

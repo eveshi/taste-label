@@ -1,6 +1,6 @@
 import React from 'react';
 import Rate from '../../../assets/icon/rate';
-import Label from '../../../assets/icon/label';
+import Labeling from '../../../assets/icon/label';
 import Discuss from '../../../assets/icon/discuss';
 import classes from './Intro.css';
 
@@ -16,7 +16,7 @@ const Intro = () => (
       </p>
     </div>
     <div className={classes.intro__feature_2}>
-      <Label />
+      <Labeling />
       <p>
         Easy rating and labeling system.
       </p>

@@ -1,0 +1,11 @@
+@import '../../stylesheets/main.scss';
+
+.ratingBar {
+  width: 100%;
+  background-color: $color-primary-dark;
+
+  color: $color-secondary-dark;
+
+  display: flex;
+  flex-direction: row;
+}

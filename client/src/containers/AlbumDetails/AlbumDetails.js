@@ -1,11 +1,12 @@
 import React, { PureComponent } from 'react';
 import AlbumInfo from '../../components/AlbumInfo/AlbumInfo';
+import RatingBar from '../../components/RatingBar/RatingBar';
 import classes from './AlbumDetails.css';
 
 class AlbumDetails extends PureComponent {
   state = {
     albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
-    albumName: 'Ten New Songs',
+    albumName: 'Ordinary Human Currupt Love',
     description: 'In My Secret Life. I saw you this morning. A Thousand Kisses Deep. for Sandy. That Don\'t Make It Junk. I fought against the bottle, Here It Is. Here is your crown. Love Itself. for L.W. *) The light came through the window, By The Rivers Dark. By the rivers dark. Alexandra Leaving. You Have Loved Enough.',
     genres: 'soft rock',
     musician: 'Leonard Cohen',
@@ -83,18 +84,21 @@ class AlbumDetails extends PureComponent {
 
     return (
       <div className={classes.albumDetails}>
-        <AlbumInfo
-          albumCoverSrc={albumCoverSrc}
-          albumName={albumName}
-          description={description}
-          genres={genres}
-          musician={musician}
-          numbersOfRatings={numbersOfRatings}
-          rating={rating}
-          tracks={tracks}
-          type={type}
-          year={year}
-        />
+        <div className={classes.albumDetails__content}>
+          <AlbumInfo
+            albumCoverSrc={albumCoverSrc}
+            albumName={albumName}
+            description={description}
+            genres={genres}
+            musician={musician}
+            numbersOfRatings={numbersOfRatings}
+            rating={rating}
+            tracks={tracks}
+            type={type}
+            year={year}
+          />
+          <RatingBar />
+        </div>
       </div>
     );
   }

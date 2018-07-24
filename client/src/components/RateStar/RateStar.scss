@@ -1,0 +1,41 @@
+@import '../../stylesheets/main.scss';
+
+.rateStar {
+  width: 10rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+
+  position: relative;
+
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: .5rem;
+    z-index: -10;
+  }
+
+  &__input:checked + label,
+  &__input:checked ~ &__label{
+    svg {
+      fill: gold;
+    }
+  }
+
+  &__label {
+    svg{
+      width: 2rem;
+      height: 2rem;
+      fill: $color-primary-lighter;
+    }
+  
+    &:hover,
+    &:hover ~ & {
+      svg {
+        fill: gold;
+      }
+    }
+  }
+}
