@@ -34,6 +34,7 @@ export default Charts;
 
 const list = [
   {
+    id: '1',
     albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
     ranking: '01',
     albumName: 'Ten New Songs',
@@ -43,6 +44,7 @@ const list = [
     rating: '9.0',
   },
   {
+    id: '2',
     albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
     ranking: '01',
     albumName: 'Ten New Songs',
@@ -52,6 +54,7 @@ const list = [
     rating: '9.0',
   },
   {
+    id: '3',
     albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
     ranking: '01',
     albumName: 'Ten New Songs',
@@ -61,6 +64,7 @@ const list = [
     rating: '9.0',
   },
   {
+    id: '4',
     albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
     ranking: '01',
     albumName: 'Ten New Songs',
@@ -70,6 +74,7 @@ const list = [
     rating: '9.0',
   },
   {
+    id: '5',
     albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
     ranking: '01',
     albumName: 'Ten New Songs',
@@ -79,6 +84,7 @@ const list = [
     rating: '9.0',
   },
   {
+    id: '6',
     albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
     ranking: '01',
     albumName: 'Ten New Songs',

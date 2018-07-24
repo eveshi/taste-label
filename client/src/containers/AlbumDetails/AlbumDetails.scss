@@ -1,0 +1,9 @@
+@import '../../stylesheets/main.scss';
+
+.albumDetails {
+  background-color: $color-secondary-middle;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

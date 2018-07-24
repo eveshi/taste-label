@@ -13,42 +13,52 @@ class AlbumDetails extends PureComponent {
     rating: '9.0',
     tracks: [
       {
+        id: '1',
         name: 'In My Secret Life',
         duration: '4:55',
       },
       {
+        id: '2',
         name: 'A Thousand Kisses Deep',
         duration: '6:29',
       },
       {
+        id: '3',
         name: 'That Don\'t Make It Junk',
         duration: '4:28',
       },
       {
+        id: '4',
         name: 'Here It Is',
         duration: '4:18',
       },
       {
+        id: '5',
         name: 'Love Itself',
         duration: '5:26',
       },
       {
+        id: '6',
         name: 'By the Rivers Dark',
         duration: '5:20',
       },
       {
+        id: '7',
         name: 'Alexandra Leaving',
         duration: '5:25',
       },
       {
+        id: '8',
         name: 'You Have Loved Enough',
         duration: '5:41',
       },
       {
+        id: '9',
         name: 'Boogie Street',
         duration: '6:04',
       },
       {
+        id: '10',
         name: 'The Land of Plenty',
         duration: '4:35',
       },
@@ -72,19 +82,20 @@ class AlbumDetails extends PureComponent {
     } = this.state;
 
     return (
-      <AlbumInfo
-        className={classes.albumDetails}
-        albumCoverSrc={albumCoverSrc}
-        albumName={albumName}
-        description={description}
-        genres={genres}
-        musician={musician}
-        numbersOfRatings={numbersOfRatings}
-        rating={rating}
-        tracks={tracks}
-        type={type}
-        year={year}
-      />
+      <div className={classes.albumDetails}>
+        <AlbumInfo
+          albumCoverSrc={albumCoverSrc}
+          albumName={albumName}
+          description={description}
+          genres={genres}
+          musician={musician}
+          numbersOfRatings={numbersOfRatings}
+          rating={rating}
+          tracks={tracks}
+          type={type}
+          year={year}
+        />
+      </div>
     );
   }
 }

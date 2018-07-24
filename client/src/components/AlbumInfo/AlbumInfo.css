@@ -1,0 +1,110 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 400px) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: 'Ubuntu', sans-serif; }
+
+.albumInfo {
+  width: 90%;
+  background-color: #ffffff;
+  box-shadow: 0 0 2rem #060505;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 30rem 1fr;
+  grid-column-gap: 2.5rem;
+  align-items: center; }
+  .albumInfo__leftbar {
+    grid-column: 1 / 2;
+    border-right: 2px dotted #DECDA7;
+    background-color: #F5F5F4;
+    display: grid;
+    grid-template-rows: 30rem 1fr;
+    justify-content: center;
+    align-items: center; }
+    .albumInfo__leftbar__cover {
+      grid-row: 1 / 2;
+      width: 24rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .albumInfo__leftbar__cover p {
+        font-size: 1.4rem;
+        padding-top: 1rem;
+        padding-bottom: .5rem;
+        border-bottom: 2px groove #DECDA7; }
+    .albumInfo__leftbar__tracks {
+      width: 24rem;
+      grid-row: 2 / 3;
+      border: 2px outset #DECDA7;
+      padding: 1rem;
+      font-size: 1.4rem;
+      margin: 2rem auto;
+      border-radius: 1rem;
+      background-color: #ffffff; }
+      .albumInfo__leftbar__tracks__title {
+        border-bottom: 1px solid #DECDA7;
+        margin-bottom: .5rem; }
+      .albumInfo__leftbar__tracks__single {
+        display: flex;
+        flex-direction: row;
+        padding: .3rem; }
+        .albumInfo__leftbar__tracks__single:not(:last-child) {
+          border-bottom: 1px dashed #DECDA7; }
+  .albumInfo__rightbar {
+    height: 100%;
+    grid-column: 2 / 3;
+    padding-right: 2.5rem;
+    display: grid;
+    grid-template-rows: 7rem 10rem 1fr;
+    grid-template-columns: 1fr 12rem; }
+    .albumInfo__rightbar__albumName {
+      grid-row: 1 / 2;
+      grid-column: 1 / -1;
+      font-size: 3rem;
+      align-self: center;
+      border-bottom: 3px ridge #DECDA7;
+      padding-bottom: .5rem;
+      text-transform: uppercase; }
+    .albumInfo__rightbar__details {
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+      font-size: 1.6rem;
+      display: flex;
+      flex-direction: column; }
+      .albumInfo__rightbar__details p {
+        height: 3rem; }
+    .albumInfo__rightbar__rating {
+      grid-row: 2 / 3;
+      grid-column: 2 / 3;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #060505;
+      border-radius: 1.5rem;
+      color: #BD924B;
+      border: 2px ridge #BD924B;
+      width: 12rem;
+      height: 8rem; }
+      .albumInfo__rightbar__rating__number {
+        font-size: 3rem;
+        padding: 0 1rem 0 1rem; }
+    .albumInfo__rightbar__description {
+      grid-row: 3 / 4;
+      grid-column: 1 / -1;
+      padding-top: 2rem; }
+      .albumInfo__rightbar__description__title {
+        font-size: 1.6rem; }
+      .albumInfo__rightbar__description__content {
+        font-size: 1.4rem;
+        padding-top: 1rem; }

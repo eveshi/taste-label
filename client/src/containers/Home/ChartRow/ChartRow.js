@@ -9,14 +9,15 @@ const ChartRow = (props) => {
     chartName,
   } = props;
 
-  const itemList = Object.keys(list).map(key => (
+  const itemList = list.map(item => (
     <SingleItem
-      albumCoverSrc={list[key].albumCoverSrc}
-      albumName={list[key].albumName}
-      musician={list[key].musician}
-      year={list[key].year}
-      genres={list[key].genres}
-      rating={list[key].rating}
+      key={item.id}
+      albumCoverSrc={item.albumCoverSrc}
+      albumName={item.albumName}
+      musician={item.musician}
+      year={item.year}
+      genres={item.genres}
+      rating={item.rating}
     />
   ));
 
@@ -35,7 +36,7 @@ const ChartRow = (props) => {
 };
 
 ChartRow.propTypes = {
-  list: PropTypes.node.isRequired,
+  list: PropTypes.arrayOf(PropTypes.object).isRequired,
   chartName: PropTypes.string.isRequired,
 };
 

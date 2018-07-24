@@ -17,9 +17,17 @@ const AlbumInfo = (props) => {
   } = props;
 
   const tracksList = tracks.map(track => (
-    <div className={classes.albumInfo__leftbar__tracks__single}>
+    <div
+      key={track.id}
+      className={classes.albumInfo__leftbar__tracks__single}
+    >
+      <p>
+        {track.id}
+        .&nbsp;
+      </p>
       <p>
         {track.name}
+        &nbsp;&nbsp;
       </p>
       <p>
         {track.duration}
@@ -30,36 +38,56 @@ const AlbumInfo = (props) => {
   return (
     <div className={classes.albumInfo}>
       <div className={classes.albumInfo__leftbar}>
-        <img src={albumCoverSrc} alt="album cover" />
-        <p>
-          {type}
-        </p>
+        <div className={classes.albumInfo__leftbar__cover}>
+          <img src={albumCoverSrc} alt="album cover" />
+          <p>
+            type:&nbsp;
+            {type}
+          </p>
+        </div>
         <div className={classes.albumInfo__leftbar__tracks}>
+          <p className={classes.albumInfo__leftbar__tracks__title}>
+            tracks:
+          </p>
           {tracksList}
         </div>
       </div>
       <div className={classes.albumInfo__rightbar}>
-        <p>
-          {musician}
-        </p>
-        <p>
+        <p className={classes.albumInfo__rightbar__albumName}>
           {albumName}
         </p>
-        <p>
-          {year}
-        </p>
-        <p>
-          {genres}
-        </p>
-        <p>
-          {description}
-        </p>
-        <p>
-          {rating}
-        </p>
-        <p>
-          {numbersOfRatings}
-        </p>
+        <div className={classes.albumInfo__rightbar__details}>
+          <p>
+            artist:&nbsp;
+            {musician}
+          </p>
+          <p>
+            year:&nbsp;
+            {year}
+          </p>
+          <p>
+            genres:&nbsp;
+            {genres}
+          </p>
+        </div>
+        <div className={classes.albumInfo__rightbar__rating}>
+          <p className={classes.albumInfo__rightbar__rating__number}>
+            {rating}
+          </p>
+          <p>
+            &nbsp;from&nbsp;
+            {numbersOfRatings}
+            &nbsp;reviewers
+          </p>
+        </div>
+        <div className={classes.albumInfo__rightbar__description}>
+          <p className={classes.albumInfo__rightbar__description__title}>
+            Introduction
+          </p>
+          <p className={classes.albumInfo__rightbar__description__content}>
+            {description}
+          </p>
+        </div>
       </div>
     </div>
   );
@@ -73,7 +101,7 @@ AlbumInfo.propTypes = {
   musician: PropTypes.string.isRequired,
   numbersOfRatings: PropTypes.string.isRequired,
   rating: PropTypes.string.isRequired,
-  tracks: PropTypes.string.isRequired,
+  tracks: PropTypes.arrayOf(PropTypes.object).isRequired,
   type: PropTypes.string.isRequired,
   year: PropTypes.string.isRequired,
 };
