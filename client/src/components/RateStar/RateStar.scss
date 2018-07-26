@@ -1,8 +1,6 @@
 @import '../../stylesheets/main.scss';
 
 .rateStar {
-  width: 10rem;
-  height: 2rem;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -26,8 +24,8 @@
 
   &__label {
     svg{
-      width: 2rem;
-      height: 2rem;
+      width: 3rem;
+      height: 3rem;
       fill: $color-primary-lighter;
     }
   

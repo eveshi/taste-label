@@ -1,0 +1,16 @@
+@import '../../stylesheets/main.scss';
+
+.input {
+  border: none;
+  background-color: transparent;
+  margin: 1rem auto;
+  font-size: 1.4rem;
+  border-bottom: 2px solid $color-secondary-dark;
+  padding-bottom: .5rem;
+  width: 20rem;
+  color: $color-secondary-dark;
+
+  &:focus {
+    outline: none;
+  }
+}

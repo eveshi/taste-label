@@ -35,8 +35,6 @@ body {
     justify-content: center; }
     .chartRow__header::before, .chartRow__header::after {
       content: '';
-      height: 1.8rem;
-      width: 1.8rem;
       margin: 1rem;
       border-bottom: 1rem solid transparent;
       border-top: 1rem solid transparent; }

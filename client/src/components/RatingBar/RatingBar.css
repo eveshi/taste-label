@@ -19,4 +19,57 @@ body {
   background-color: #060505;
   color: #BD924B;
   display: flex;
-  flex-direction: row; }
+  flex-direction: column;
+  align-items: center; }
+  .ratingBar__rateNow {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .ratingBar__rateNow__text {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+      .ratingBar__rateNow__text p {
+        font-size: 2.4rem;
+        font-weight: bold;
+        text-transform: uppercase; }
+      .ratingBar__rateNow__text::before, .ratingBar__rateNow__text::after {
+        content: '\2297';
+        margin: 2rem;
+        transform: scale(2); }
+  .ratingBar__button {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem; }
+    .ratingBar__button > * {
+      margin: auto 1rem; }
+  .ratingBar__more {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .ratingBar__more__labels {
+      display: flex;
+      flex-direction: row;
+      width: 30rem;
+      justify-content: space-evenly; }
+    .ratingBar__more__track {
+      width: 30rem;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      border: 2px ridge #BD924B; }
+      .ratingBar__more__track_single {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1.4rem; }
+        .ratingBar__more__track_single_text {
+          display: flex;
+          flex-direction: row; }
+        .ratingBar__more__track_single:not(:last-child) {
+          padding-bottom: 3px;
+          border-bottom: 1px dashed #BD924B; }
+        .ratingBar__more__track_single svg {
+          height: 2rem;
+          width: 2rem; }

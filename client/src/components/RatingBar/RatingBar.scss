@@ -7,5 +7,87 @@
   color: $color-secondary-dark;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+
+  &__rateNow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__text {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      p {
+        font-size: 2.4rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      &::before,
+      &::after {
+        content: '\2297';
+        margin: 2rem;
+        transform: scale(2);
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+
+    & > * {
+      margin: auto 1rem;
+    }
+  }
+
+  &__more {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__labels {
+      display: flex;
+      flex-direction: row;
+      width: 30rem;
+      justify-content: space-evenly;
+    }
+
+    &__track {
+      width: 30rem;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+
+      border: 2px ridge $color-secondary-dark;
+
+      &_single{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        font-size: 1.4rem;
+
+        &_text {
+          display: flex;
+          flex-direction: row;
+        }
+
+        &:not(:last-child) {
+          padding-bottom: 3px;
+          border-bottom: 1px dashed $color-secondary-dark;
+        }
+
+        svg {
+          height: 2rem;
+          width: 2rem;
+        }
+      }
+    }
+  }
 }

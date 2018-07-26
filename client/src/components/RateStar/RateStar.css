@@ -15,8 +15,6 @@ body {
   font-family: 'Ubuntu', sans-serif; }
 
 .rateStar {
-  width: 10rem;
-  height: 2rem;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -31,8 +29,8 @@ body {
   .rateStar__input:checked ~ .rateStar__label svg {
     fill: gold; }
   .rateStar__label svg {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     fill: #ffffff; }
   .rateStar__label:hover svg,
   .rateStar__label:hover ~ .rateStar__label svg {

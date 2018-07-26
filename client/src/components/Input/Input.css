@@ -1,0 +1,27 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 400px) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: 'Ubuntu', sans-serif; }
+
+.input {
+  border: none;
+  background-color: transparent;
+  margin: 1rem auto;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #BD924B;
+  padding-bottom: .5rem;
+  width: 20rem;
+  color: #BD924B; }
+  .input:focus {
+    outline: none; }

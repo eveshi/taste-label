@@ -1,0 +1,32 @@
+@import '../../stylesheets/main.scss';
+
+.textarea {
+  position: relative;
+
+  &_area {
+    margin: 2rem;
+    width: 50rem;
+    height: 20rem;
+    font-size: 1.4rem;
+    padding: 1rem;
+    border: 2px ridge $color-secondary-dark;
+    border-radius: 1rem;
+    background-color: $color-primary-light;
+
+    &:focus {
+      outline: none;
+    }
+
+    @include responsive(phone) {
+      width: 30rem;
+    }
+  }
+
+  &_length {
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    z-index: 10;
+    color: $color-secondary-darker;
+  }
+}

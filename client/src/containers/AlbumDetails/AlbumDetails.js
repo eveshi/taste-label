@@ -97,7 +97,9 @@ class AlbumDetails extends PureComponent {
             type={type}
             year={year}
           />
-          <RatingBar />
+          <RatingBar
+            tracks={tracks}
+          />
         </div>
       </div>
     );
