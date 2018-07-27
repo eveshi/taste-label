@@ -1,0 +1,67 @@
+@import '../../stylesheets/main.scss';
+
+.commentItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-primary-lighter;
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    height: 4rem;
+    font-size: 1.6rem;
+    background-color: $color-primary-light;
+    color: $color-primary-dark;
+    align-items: center;
+    border-bottom: 1px outset $color-primary-light;
+
+    p {
+      padding: 2rem;
+    }
+
+    svg {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+
+    &__comment {
+      font-size: 1.4rem;
+      padding: 1rem;
+    }
+
+    &__trackRate {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      margin: 1rem;
+      padding: 1rem;
+      border: 2px ridge $color-primary-dark;
+      border-radius: 1rem;
+      color: $color-primary-dark;
+
+      width: 14rem;
+      float: right;
+      top: 2rem;
+      right: 2rem;
+
+      &_single {
+        display: flex;
+        flex-direction: row;
+        height: 3rem;
+        align-items: center;
+
+        svg {
+          height: 2rem;
+          width: 2rem;
+        }
+      }
+    }
+  }
+}

@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import AlbumInfo from '../../components/AlbumInfo/AlbumInfo';
 import RatingBar from '../../components/RatingBar/RatingBar';
 import classes from './AlbumDetails.css';
+import CommentDisplay from '../../components/CommentDisplay/CommentDisplay';
 
 class AlbumDetails extends PureComponent {
   state = {
@@ -100,6 +101,7 @@ class AlbumDetails extends PureComponent {
           <RatingBar
             tracks={tracks}
           />
+          <CommentDisplay />
         </div>
       </div>
     );

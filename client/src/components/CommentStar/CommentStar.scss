@@ -1,0 +1,14 @@
+@import '../../stylesheets/main.scss';
+
+.commentStar {
+  display: flex;
+  flex-direction: row;
+}
+
+.fill {
+  fill: gold;
+}
+
+.notfill {
+  fill: $color-primary-lighter;
+}

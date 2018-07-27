@@ -2,13 +2,10 @@
 
 .albumInfo {
   background-color: $color-primary-lighter;
-  //box-shadow: 0 0 2rem $color-primary-dark;
-  // border-right: 2px dotted $color-secondary-middle;
-  // border-left: 2px dotted $color-secondary-middle;
 
   display: grid;
-  grid-template-rows: 1fr; //7rem 23rem 1fr;
-  grid-template-columns: $leftbar-width 1fr;//30rem 1fr;
+  grid-template-rows: 1fr;
+  grid-template-columns: $leftbar-width 1fr;
   grid-column-gap: 2.5rem;
   align-items: center;
 
@@ -144,4 +141,13 @@
     }
   }
   }
+
+  @include responsive(phone) {
+    display: flex;
+    flex-direction: column-reverse;
+
+    &__rightbar {
+      padding: 2rem;
+    }
+  } 
 }

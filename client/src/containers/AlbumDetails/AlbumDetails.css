@@ -25,3 +25,7 @@ body {
     align-items: center;
     width: 90%;
     box-shadow: 0 0 2rem #060505; }
+    @media only screen and (max-width: 900px) {
+      .albumDetails__content {
+        width: 100%;
+        box-shadow: none; } }

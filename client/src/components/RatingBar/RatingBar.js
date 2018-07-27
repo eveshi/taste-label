@@ -145,7 +145,7 @@ class RatingBar extends PureComponent {
                   {labels}
                 </div>
                 <Textarea
-                  maxLength="500"
+                  maxLength="10000"
                   value={comment}
                   placeholder="Write your comment..."
                   inputLength={inputLength}

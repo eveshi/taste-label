@@ -13,5 +13,10 @@
 
     width: 90%;
     box-shadow: 0 0 2rem $color-primary-dark;
+
+    @include responsive(tablet-horizon) {
+      width: 100%;
+      box-shadow: none;
+    }
   }
 }

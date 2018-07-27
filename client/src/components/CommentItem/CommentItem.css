@@ -1,0 +1,62 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 400px) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: 'Ubuntu', sans-serif; }
+
+.commentItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff; }
+  .commentItem__title {
+    display: flex;
+    flex-direction: row;
+    height: 4rem;
+    font-size: 1.6rem;
+    background-color: #F5F5F4;
+    color: #060505;
+    align-items: center;
+    border-bottom: 1px outset #F5F5F4; }
+    .commentItem__title p {
+      padding: 2rem; }
+    .commentItem__title svg {
+      height: 2rem;
+      width: 2rem; }
+  .commentItem__content {
+    display: flex;
+    flex-direction: row; }
+    .commentItem__content__comment {
+      font-size: 1.4rem;
+      padding: 1rem; }
+    .commentItem__content__trackRate {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 1rem;
+      padding: 1rem;
+      border: 2px ridge #060505;
+      border-radius: 1rem;
+      color: #060505;
+      width: 14rem;
+      float: right;
+      top: 2rem;
+      right: 2rem; }
+      .commentItem__content__trackRate_single {
+        display: flex;
+        flex-direction: row;
+        height: 3rem;
+        align-items: center; }
+        .commentItem__content__trackRate_single svg {
+          height: 2rem;
+          width: 2rem; }

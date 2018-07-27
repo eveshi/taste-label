@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Star from '../../assets/icon/star';
-import classes from './CommentStar.scss';
+import classes from './CommentStar.css';
 
 const CommnetStar = (props) => {
-  const { level } = props;
+  const { rate } = props;
 
   const classArray = [
     classes.notfill,
@@ -16,25 +16,35 @@ const CommnetStar = (props) => {
 
   const classNames = classArray.map((item, index) => {
     let newItem = item;
-    if (index < level) {
+    if (index < rate) {
       newItem = classes.fill;
     }
     return newItem;
   });
 
   return (
-    <div>
-      <Star className={classNames[0]} />
-      <Star className={classNames[1]} />
-      <Star className={classNames[2]} />
-      <Star className={classNames[3]} />
-      <Star className={classNames[4]} />
+    <div className={classes.commentStar}>
+      <div className={classNames[0]}>
+        <Star />
+      </div>
+      <div className={classNames[1]}>
+        <Star />
+      </div>
+      <div className={classNames[2]}>
+        <Star />
+      </div>
+      <div className={classNames[3]}>
+        <Star />
+      </div>
+      <div className={classNames[4]}>
+        <Star />
+      </div>
     </div>
   );
 };
 
 CommnetStar.propTypes = {
-  level: PropTypes.number.isRequired,
-}
+  rate: PropTypes.number.isRequired,
+};
 
 export default CommnetStar;
