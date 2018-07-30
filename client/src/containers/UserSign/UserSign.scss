@@ -1,0 +1,53 @@
+@import '../../stylesheets/main.scss';
+
+.userSign {
+  padding-top: $toolBar-height;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+
+  .notShow {
+    display: none;
+  }
+}
+
+.box {
+  width: 30rem;
+  height: 40rem;
+  border: 3px ridge $color-secondary-dark;
+  margin: 2rem;
+  border-radius: 2rem;
+  overflow: hidden;
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    button {
+      border: none;
+      background-color: transparent;
+      width: 100%;
+    }
+    
+    :hover {
+      transform: none;
+      border: none;
+    }
+
+    :focus {
+      outline: none;
+    }
+
+    .button_notActive {
+      background-color: $color-primary-light;
+    }
+
+    .button_active,
+    .button_notActive {
+      width: 50%;
+    }
+  }
+}

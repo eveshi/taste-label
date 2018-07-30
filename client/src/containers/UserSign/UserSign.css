@@ -1,0 +1,50 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 400px) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: 'Ubuntu', sans-serif; }
+
+.userSign {
+  padding-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh; }
+  .userSign .notShow {
+    display: none; }
+
+.box {
+  width: 30rem;
+  height: 40rem;
+  border: 3px ridge #BD924B;
+  margin: 2rem;
+  border-radius: 2rem;
+  overflow: hidden; }
+  .box__title {
+    display: flex;
+    flex-direction: row;
+    width: 100%; }
+    .box__title button {
+      border: none;
+      background-color: transparent;
+      width: 100%; }
+    .box__title :hover {
+      transform: none;
+      border: none; }
+    .box__title :focus {
+      outline: none; }
+    .box__title .button_notActive {
+      background-color: #F5F5F4; }
+    .box__title .button_active,
+    .box__title .button_notActive {
+      width: 50%; }

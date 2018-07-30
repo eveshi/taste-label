@@ -1,6 +1,8 @@
 @import '../../stylesheets/main.scss';
 
 .home {
+  padding-top: $toolBar-height;
+
   display: flex;
   flex-direction: column;
   align-items: center;

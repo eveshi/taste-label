@@ -9,12 +9,13 @@ const Input = (props) => {
     value,
     onKeyPress,
     onChange,
+    type,
   } = props;
 
   return (
     <input
       className={classes.input}
-      type="text"
+      type={type}
       maxLength={maxLength}
       placeholder={placeholder}
       value={value}
@@ -30,6 +31,11 @@ Input.propTypes = {
   value: PropTypes.string.isRequired,
   onKeyPress: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
+  type: PropTypes.string,
+};
+
+Input.defaultProps = {
+  type: 'text',
 };
 
 export default Input;

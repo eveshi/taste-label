@@ -16,5 +16,5 @@ body {
 
 .layouts {
   width: 100%;
-  position: relative;
-  padding-top: 5rem; }
+  height: 100vh;
+  position: relative; }

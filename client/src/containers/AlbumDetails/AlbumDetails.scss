@@ -1,6 +1,8 @@
 @import '../../stylesheets/main.scss';
 
 .albumDetails {
+  padding-top: $toolBar-height;
+
   background-color: $color-secondary-middle;
   display: flex;
   flex-direction: column;

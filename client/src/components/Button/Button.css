@@ -24,6 +24,7 @@ body {
   font-size: 1.4rem;
   text-transform: uppercase;
   font-weight: bold;
+  cursor: pointer;
   transition: all .2s ease; }
   .button:hover {
     transform: scale(0.97);

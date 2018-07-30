@@ -1,10 +1,13 @@
 @import '../../stylesheets/main.scss';
 
 .footer {
+  width: 100vw;
   background-color: $color-primary-dark;
   color: $color-secondary-dark;
   font-size: 1.4rem;
   padding-top: 4rem;
+
+  height: 20vh;
 
   display: flex;
   flex-direction: row;
@@ -17,6 +20,7 @@
     p:not(:last-child) {
       border-bottom: 2px solid $color-secondary-dark;
       padding-bottom: 1rem;
+      align-self: end;
     }
   }
 
@@ -45,5 +49,9 @@
     grid-gap: 1rem;
     padding-bottom: 4rem;
     justify-items: flex-start;
+  }
+
+  @include responsive(phone) {
+    height: 40vh;
   }
 }

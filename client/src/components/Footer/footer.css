@@ -15,10 +15,12 @@ body {
   font-family: 'Ubuntu', sans-serif; }
 
 .footer {
+  width: 100vw;
   background-color: #060505;
   color: #BD924B;
   font-size: 1.4rem;
   padding-top: 4rem;
+  height: 20vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -27,7 +29,8 @@ body {
     min-width: 22rem; }
     .footer > * p:not(:last-child) {
       border-bottom: 2px solid #BD924B;
-      padding-bottom: 1rem; }
+      padding-bottom: 1rem;
+      align-self: end; }
   .footer__links {
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -47,3 +50,6 @@ body {
     grid-gap: 1rem;
     padding-bottom: 4rem;
     justify-items: flex-start; }
+  @media only screen and (max-width: 600px) {
+    .footer {
+      height: 40vh; } }

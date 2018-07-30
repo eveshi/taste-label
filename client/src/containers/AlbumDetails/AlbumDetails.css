@@ -15,6 +15,7 @@ body {
   font-family: 'Ubuntu', sans-serif; }
 
 .albumDetails {
+  padding-top: 5rem;
   background-color: #DECDA7;
   display: flex;
   flex-direction: column;

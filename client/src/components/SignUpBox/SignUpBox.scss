@@ -1,0 +1,35 @@
+@import '../../stylesheets/main.scss';
+
+.signUpBox {
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__input {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    color: $color-primary-dark;
+
+    p {
+      align-self: center;
+      font-size: 1.4rem;
+    }
+
+    input {
+      width: 15rem;
+      margin: 1rem 0;
+    }
+  }
+
+  &__button {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
