@@ -8,13 +8,27 @@ const SignInBox = (props) => {
   const {
     email,
     emailChangeHandler,
+    isEmailValid,
     password,
     passwordChangeHandler,
+    isPasswordValid,
+    submitTrigger,
   } = props;
+
+  let emailValidationClass = classes.signInBox__input;
+  let passwordValidationClass = classes.signInBox__input;
+
+  if (isEmailValid === false) {
+    emailValidationClass = classes.signInBox__emailNotValid;
+  }
+
+  if (isPasswordValid === false) {
+    passwordValidationClass = classes.signInBox__passwordNotValid;
+  }
 
   return (
     <div className={classes.signInBox}>
-      <div className={classes.signInBox__input}>
+      <div className={emailValidationClass}>
         <p>
           email:
         </p>
@@ -25,7 +39,7 @@ const SignInBox = (props) => {
           onChange={emailChangeHandler}
         />
       </div>
-      <div className={classes.signInBox__input}>
+      <div className={passwordValidationClass}>
         <p>
           password:
         </p>
@@ -42,7 +56,7 @@ const SignInBox = (props) => {
           Sign In
         </Button>
         <div className={classes.signInBox__button_forgetPassword}>
-          <Button>
+          <Button onClick={submitTrigger}>
             forget password
           </Button>
         </div>
@@ -53,9 +67,12 @@ const SignInBox = (props) => {
 
 SignInBox.propTypes = {
   email: PropTypes.string.isRequired,
+  isEmailValid: PropTypes.bool.isRequired,
   emailChangeHandler: PropTypes.func.isRequired,
   password: PropTypes.string.isRequired,
+  isPasswordValid: PropTypes.bool.isRequired,
   passwordChangeHandler: PropTypes.func.isRequired,
+  submitTrigger: PropTypes.func.isRequired,
 };
 
 export default SignInBox;

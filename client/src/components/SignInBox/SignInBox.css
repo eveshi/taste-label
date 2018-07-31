@@ -20,20 +20,37 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center; }
-  .signInBox__input {
+  .signInBox__input, .signInBox__emailNotValid, .signInBox__passwordNotValid {
     width: 80%;
+    margin-top: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: relative;
     color: #060505; }
-    .signInBox__input p {
+    .signInBox__input p, .signInBox__emailNotValid p, .signInBox__passwordNotValid p {
       align-self: center;
-      font-size: 1.4rem; }
-    .signInBox__input input {
+      font-size: 1.6rem; }
+    .signInBox__input input, .signInBox__emailNotValid input, .signInBox__passwordNotValid input {
       width: 15rem;
       margin: 1rem 0; }
+  .signInBox__emailNotValid input, .signInBox__passwordNotValid input {
+    border-bottom: 2px solid #027D76; }
+  .signInBox__emailNotValid::after, .signInBox__passwordNotValid::after {
+    color: #027D76;
+    height: 1.4rem;
+    width: 15rem;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    text-align: right; }
+  .signInBox__emailNotValid::after {
+    content: 'email address is not valid'; }
+  .signInBox__passwordNotValid::after {
+    content: 'password is not valid'; }
   .signInBox__button {
-    margin-top: 2rem;
+    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center; }

@@ -7,17 +7,21 @@
   align-items: center;
   justify-content: center;
 
-  &__input {
+  &__input,
+  &__emailNotValid,
+  &__passwordNotValid {
     width: 80%;
+    margin-top: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: relative;
 
     color: $color-primary-dark;
 
     p {
       align-self: center;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
     }
 
     input {
@@ -26,8 +30,38 @@
     }
   }
 
+  &__emailNotValid,
+  &__passwordNotValid {
+    input {
+      border-bottom: 2px solid $color-green;
+    }
+
+    &::after {
+      color: $color-green;
+      height: 1.4rem;
+      width: 15rem;
+      font-size: 1.2rem;
+      position: absolute;
+      bottom: -5px;
+      right: 0;
+      text-align: right;
+    }
+  }
+
+  &__emailNotValid {
+    &::after {
+      content: 'email address is not valid';
+    }
+  }
+
+  &__passwordNotValid {
+    &::after {
+      content: 'password is not valid';
+    }
+  }
+
   &__button {
-    margin-top: 2rem;
+    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;

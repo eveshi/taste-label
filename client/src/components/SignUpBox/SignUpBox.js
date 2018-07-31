@@ -7,18 +7,44 @@ import classes from './SignUpBox.css';
 const SignUpBox = (props) => {
   const {
     email,
+    isEmailValid,
     emailChangeHandler,
     password,
+    isPasswordValid,
     passwordChangeHandler,
     username,
+    isUsernameValid,
     usernameChangeHandler,
     repeatPassword,
+    isRepeatPasswordValid,
     repeatPasswordChangeHandler,
+    submitTrigger,
   } = props;
+
+  let emailValidationClass = classes.signUpBox__input;
+  let passwordValidationClass = classes.signUpBox__input;
+  let repeatPasswordValidationClass = classes.signUpBox__input;
+  let usernameValidationClass = classes.signUpBox__input;
+
+  if (isEmailValid === false) {
+    emailValidationClass = classes.signUpBox__emailNotValid;
+  }
+
+  if (isPasswordValid === false) {
+    passwordValidationClass = classes.signUpBox__passwordNotValid;
+  }
+
+  if (isRepeatPasswordValid === false) {
+    repeatPasswordValidationClass = classes.signUpBox__repeatPasswordNotValid;
+  }
+
+  if (isUsernameValid === false) {
+    usernameValidationClass = classes.signUpBox__usernameNotValid;
+  }
 
   return (
     <div className={classes.signUpBox}>
-      <div className={classes.signUpBox__input}>
+      <div className={emailValidationClass}>
         <p>
           email:
         </p>
@@ -29,7 +55,7 @@ const SignUpBox = (props) => {
           onChange={emailChangeHandler}
         />
       </div>
-      <div className={classes.signUpBox__input}>
+      <div className={usernameValidationClass}>
         <p>
           username:
         </p>
@@ -40,7 +66,7 @@ const SignUpBox = (props) => {
           onChange={usernameChangeHandler}
         />
       </div>
-      <div className={classes.signUpBox__input}>
+      <div className={passwordValidationClass}>
         <p>
           password:
         </p>
@@ -52,7 +78,7 @@ const SignUpBox = (props) => {
           onChange={passwordChangeHandler}
         />
       </div>
-      <div className={classes.signUpBox__input}>
+      <div className={repeatPasswordValidationClass}>
         <p>
           repeat password:
         </p>
@@ -65,7 +91,7 @@ const SignUpBox = (props) => {
         />
       </div>
       <div className={classes.signUpBox__button}>
-        <Button>
+        <Button onClick={submitTrigger}>
           Sign Up
         </Button>
       </div>
@@ -75,13 +101,18 @@ const SignUpBox = (props) => {
 
 SignUpBox.propTypes = {
   email: PropTypes.string.isRequired,
+  isEmailValid: PropTypes.bool.isRequired,
   emailChangeHandler: PropTypes.func.isRequired,
   password: PropTypes.string.isRequired,
+  isPasswordValid: PropTypes.bool.isRequired,
   passwordChangeHandler: PropTypes.func.isRequired,
   username: PropTypes.string.isRequired,
+  isUsernameValid: PropTypes.bool.isRequired,
   usernameChangeHandler: PropTypes.func.isRequired,
   repeatPassword: PropTypes.string.isRequired,
+  isRepeatPasswordValid: PropTypes.bool.isRequired,
   repeatPasswordChangeHandler: PropTypes.func.isRequired,
+  submitTrigger: PropTypes.func.isRequired,
 };
 
 export default SignUpBox;

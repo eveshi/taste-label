@@ -7,39 +7,129 @@ import Button from '../../components/Button/Button';
 class UserSign extends PureComponent {
   state = {
     signInEmail: '',
+    isSignInEmailValid: true,
     signInPassword: '',
+    isSignInPasswordValid: true,
     signUpEmail: '',
+    isSignUpEmailValid: true,
     signUpPassword: '',
+    isSignUpPasswordValid: true,
     signUpUsername: '',
+    isSignUpUsernameValid: true,
     signUpRepeatPassword: '',
+    isSignUpRepeatPasswordValid: true,
     signInButtonStatus: classes.button_active,
     signUpButtonStatus: classes.button_notActive,
     showSignIn: null,
     showSignUp: classes.notShow,
   };
 
-  signInEmailChangeHandler = () => {
-    console.log('1');
+  signInEmailChangeHandler = (event) => {
+    const { value } = event.target;
+    const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
+    if (!value.match(pattern)) {
+      this.setState({
+        signInEmail: value,
+        isSignInEmailValid: false,
+      });
+    }
+
+    if (value.match(pattern)) {
+      this.setState({
+        signInEmail: value,
+        isSignInEmailValid: true,
+      });
+    }
   }
 
-  signInPasswordChangeHandler = () => {
-    console.log('2');
+  signInPasswordChangeHandler = (event) => {
+    const { value } = event.target;
+    const pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm;
+    if (!value.match(pattern)) {
+      this.setState({
+        signInPassword: value,
+        isSignInPasswordValid: false,
+      });
+    }
+
+    if (value.match(pattern)) {
+      this.setState({
+        signInPassword: value,
+        isSignInPasswordValid: true,
+      });
+    }
   }
 
-  signUpEmailChangeHandler = () => {
-    console.log('2');
+  signUpEmailChangeHandler = (event) => {
+    const { value } = event.target;
+    const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
+    if (!value.match(pattern)) {
+      this.setState({
+        signUpEmail: value,
+        isSignUpEmailValid: false,
+      });
+    }
+
+    if (value.match(pattern)) {
+      this.setState({
+        signUpEmail: value,
+        isSignUpEmailValid: true,
+      });
+    }
   }
 
-  signUpPasswordChangeHandler = () => {
-    console.log('2');
+  signUpPasswordChangeHandler = (event) => {
+    const { value } = event.target;
+    const pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm;
+    if (!value.match(pattern)) {
+      this.setState({
+        signUpPassword: value,
+        isSignUpPasswordValid: false,
+      });
+    }
+
+    if (value.match(pattern)) {
+      this.setState({
+        signUpPassword: value,
+        isSignUpPasswordValid: true,
+      });
+    }
   }
 
-  signUpRepeatPasswordChangeHandler = () => {
-    console.log('2');
+  signUpRepeatPasswordChangeHandler = (event) => {
+    const { value } = event.target;
+    const pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm;
+    if (!value.match(pattern)) {
+      this.setState({
+        signUpRepeatPassword: value,
+        isSignUpRepeatPasswordValid: false,
+      });
+    }
+
+    if (value.match(pattern)) {
+      this.setState({
+        signUpRepeatPassword: value,
+        isSignUpRepeatPasswordValid: true,
+      });
+    }
   }
 
-  signUpUsernameChangeHandler = () => {
-    console.log('2');
+  signUpUsernameChangeHandler = (event) => {
+    const { value } = event.target;
+    const pattern = /^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{2,29}$/igm;
+    if (!value.match(pattern)) {
+      this.setState({
+        signUpUsername: value,
+        isSignUpUsernameValid: false,
+      });
+    }
+
+    if (value.match(pattern)) {
+      this.setState({
+        signUpUsername: value,
+        isSignUpUsernameValid: true,
+      });
+    }
   }
 
   showSignInHandler = () => {
@@ -63,11 +153,17 @@ class UserSign extends PureComponent {
   render() {
     const {
       signInEmail,
+      isSignInEmailValid,
       signInPassword,
+      isSignInPasswordValid,
       signUpEmail,
+      isSignUpEmailValid,
       signUpPassword,
+      isSignUpPasswordValid,
       signUpUsername,
+      isSignUpUsernameValid,
       signUpRepeatPassword,
+      isSignUpRepeatPasswordValid,
       signInButtonStatus,
       signUpButtonStatus,
       showSignIn,
@@ -103,21 +199,27 @@ class UserSign extends PureComponent {
           <div className={showSignIn}>
             <SignInBox
               email={signInEmail}
-              emailChangeHandler={signInEmailChangeHandler}
+              isEmailValid={isSignInEmailValid}
+              emailChangeHandler={event => signInEmailChangeHandler(event)}
               password={signInPassword}
-              passwordChangeHandler={signInPasswordChangeHandler}
+              isPasswordValid={isSignInPasswordValid}
+              passwordChangeHandler={event => signInPasswordChangeHandler(event)}
             />
           </div>
           <div className={showSignUp}>
             <SignUpBox
               email={signUpEmail}
-              emailChangeHandler={signUpEmailChangeHandler}
+              isEmailValid={isSignUpEmailValid}
+              emailChangeHandler={event => signUpEmailChangeHandler(event)}
               username={signUpUsername}
-              usernameChangeHandler={signUpUsernameChangeHandler}
+              isUsernameValid={isSignUpUsernameValid}
+              usernameChangeHandler={event => signUpUsernameChangeHandler(event)}
               password={signUpPassword}
-              passwordChangeHandler={signUpPasswordChangeHandler}
+              isPasswordValid={isSignUpPasswordValid}
+              passwordChangeHandler={event => signUpPasswordChangeHandler(event)}
               repeatPassword={signUpRepeatPassword}
-              repeatPasswordChangeHandler={signUpRepeatPasswordChangeHandler}
+              isRepeatPasswordValid={isSignUpRepeatPasswordValid}
+              repeatPasswordChangeHandler={event => signUpRepeatPasswordChangeHandler(event)}
             />
           </div>
         </div>
