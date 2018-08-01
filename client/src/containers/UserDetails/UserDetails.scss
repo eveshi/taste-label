@@ -1,0 +1,31 @@
+@import '../../stylesheets/main.scss';
+
+.userDetails {
+  margin-top: $toolBar-height;
+  min-height: 75vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: $color-primary-dark;
+    color: $color-secondary-dark;
+
+    &_name{
+      font-size: 3rem;
+    }
+
+    &_email{
+      font-size: 2rem;
+    }
+
+    button {
+      color: $color-secondary-dark;
+    }
+  }
+}

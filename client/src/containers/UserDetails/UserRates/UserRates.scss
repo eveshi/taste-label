@@ -1,0 +1,17 @@
+@import '../../../stylesheets/main.scss';
+
+.userRates {
+  padding: 2rem;
+  width: 100%;
+
+  &__rates {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    & > * {
+      margin: auto 1rem;
+    }
+  }
+}

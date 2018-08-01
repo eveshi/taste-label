@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
+import NoBorderButton from '../NoBorderButton/NoBorderButton';
 import classes from './SignInBox.css';
 
 const SignInBox = (props) => {
@@ -56,9 +57,9 @@ const SignInBox = (props) => {
           Sign In
         </Button>
         <div className={classes.signInBox__button_forgetPassword}>
-          <Button onClick={submitTrigger}>
+          <NoBorderButton onClick={submitTrigger}>
             forget password
-          </Button>
+          </NoBorderButton>
         </div>
       </div>
     </div>

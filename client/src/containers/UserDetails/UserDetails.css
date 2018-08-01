@@ -1,0 +1,35 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 400px) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: 'Ubuntu', sans-serif; }
+
+.userDetails {
+  margin-top: 5rem;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .userDetails__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #060505;
+    color: #BD924B; }
+    .userDetails__title_name {
+      font-size: 3rem; }
+    .userDetails__title_email {
+      font-size: 2rem; }
+    .userDetails__title button {
+      color: #BD924B; }

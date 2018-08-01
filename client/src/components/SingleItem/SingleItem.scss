@@ -76,6 +76,20 @@
       text-transform: uppercase;
       padding-top: .5rem;
     }
+
+    &__star {
+      width: 10rem;
+      margin: .5rem auto;
+
+      svg {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+  }
+
+  .displayNone {
+    display: none;
   }
 
   @include responsive(tablet-horizon) {

@@ -67,6 +67,14 @@ body {
       font-size: 1rem;
       text-transform: uppercase;
       padding-top: .5rem; }
+    .singleItem__description__star {
+      width: 10rem;
+      margin: .5rem auto; }
+      .singleItem__description__star svg {
+        height: 2rem;
+        width: 2rem; }
+  .singleItem .displayNone {
+    display: none; }
   @media only screen and (max-width: 900px) {
     .singleItem {
       grid-template-rows: repeat(2, 12rem);
