@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 400px) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: 'Ubuntu', sans-serif; }
+
+.albumsDisplayWithPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto; }
+  .albumsDisplayWithPage__albums, .albumsDisplayWithPage__pages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  .albumsDisplayWithPage__albums {
+    width: 90%; }
+  .albumsDisplayWithPage__pages {
+    width: 70%; }
+    .albumsDisplayWithPage__pages_page a, .albumsDisplayWithPage__pages_page p {
+      font-size: 1.4rem;
+      text-decoration: none;
+      color: #060505; }
+    .albumsDisplayWithPage__pages_page :hover {
+      opacity: 0.8; }
+    @media only screen and (max-width: 600px) {
+      .albumsDisplayWithPage__pages {
+        width: 90%; } }

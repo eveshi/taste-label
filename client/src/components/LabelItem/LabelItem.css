@@ -16,13 +16,14 @@ body {
 
 .labelItem {
   position: relative;
+  height: 3rem;
   background-color: #F5F5F4;
   border: 1px ridge #BD924B;
   border-radius: .8rem;
   margin: .5rem .5rem 1rem .5rem; }
   .labelItem__item {
     padding: .5rem 2rem;
-    font-size: 1.6rem; }
+    font-size: 1.4rem; }
   .labelItem__close {
     position: absolute;
     top: .3rem;
@@ -32,6 +33,7 @@ body {
     border: none;
     background: transparent;
     color: #5F513F;
+    cursor: pointer;
     transition: all .2s ease; }
     .labelItem__close:focus {
       outline: none; }

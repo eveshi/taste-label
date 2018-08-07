@@ -1,0 +1,41 @@
+@import '../../stylesheets/main.scss';
+
+.albumsDisplayWithPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 2rem auto;
+
+  &__albums,
+  &__pages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__albums {
+    width: 90%;
+  }
+
+  &__pages {
+    width: 70%;
+
+    &_page {
+      a, p {
+        font-size: 1.4rem;
+        text-decoration: none;
+        color: $color-primary-dark;
+      }
+
+      :hover {
+        opacity: 0.8;
+      }
+    }
+
+    @include responsive(phone) {
+      width: 90%;
+    }
+  }
+}

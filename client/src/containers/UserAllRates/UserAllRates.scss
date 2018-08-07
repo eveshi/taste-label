@@ -1,0 +1,15 @@
+@import '../../stylesheets/main.scss';
+
+.userAllRates {
+  padding-top: $toolBar-height;
+
+  &__title {
+    height: 5rem;
+    font-size: 2.4rem;
+    background-color: $color-primary-dark;
+    color: $color-secondary-dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

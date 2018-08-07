@@ -14,34 +14,100 @@ const AlbumsDisplayWithPage = (props) => {
 
   const albumsDisplay = albums.map(album => (
     <SingleItem
+      key={album.id}
       albumCoverSrc={album.albumCoverSrc}
       albumName={album.albumName}
       musician={album.musician}
       year={album.year}
       userRate={album.userRate}
     />
-  ))
+  ));
 
-  const pageDisplay = totalPage.map((number) => {
-    let pageClass = classes.notChoosedPage;
+  const pages = [];
 
-    if (number === page) {
-      pageClass = classes.choosedPage;
+  if (totalPage < 12) {
+    for (let i = 1; i < totalPage + 1; i += 1) {
+      pages.push(i);
+    }
+  }
+
+  if (totalPage > 11 && page < 8) {
+    for (let i = 1; i < 10; i += 1) {
+      pages.push(i);
+    }
+
+    pages.push('...');
+
+    for (let i = totalPage - 1; i < totalPage + 1; i += 1) {
+      pages.push(i);
+    }
+  }
+
+  if (totalPage > 11 && page > 7 && page < totalPage - 7) {
+    for (let i = 1; i < 3; i += 1) {
+      pages.push(i);
+    }
+
+    pages.push('...');
+
+    for (let i = page - 4; i < page + 5; i += 1) {
+      pages.push(i);
+    }
+
+    pages.push('...');
+
+    for (let i = totalPage - 1; i < totalPage + 1; i += 1) {
+      pages.push(i);
+    }
+  }
+
+  if (totalPage > 11 && page > totalPage - 8) {
+    for (let i = 1; i < 3; i += 1) {
+      pages.push(i);
+    }
+
+    pages.push('...');
+
+    for (let i = totalPage - 9; i < totalPage + 1; i += 1) {
+      pages.push(i);
+    }
+  }
+
+  const pageDisplay = pages.map((number) => {
+    if (number === '...') {
+      const random = Math.random();
+      return (
+        <div
+          key={random}
+          className={classes.albumsDisplayWithPage__pages_page}
+        >
+          <p>
+            ...
+          </p>
+        </div>
+      );
     }
 
     return (
-      <div className={pageClass}>
+      <div
+        key={number}
+        className={classes.albumsDisplayWithPage__pages_page}
+      >
         <Link to={baseUrl}>
-          number
+          {number}
         </Link>
       </div>
     );
   });
 
   return (
-    <div>
-      {albumsDisplay}
-      {pageDisplay}
+    <div className={classes.albumsDisplayWithPage}>
+      <div className={classes.albumsDisplayWithPage__albums}>
+        {albumsDisplay}
+      </div>
+      <div className={classes.albumsDisplayWithPage__pages}>
+        {pageDisplay}
+      </div>
     </div>
   );
 };

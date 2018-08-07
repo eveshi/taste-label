@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 400px) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: 'Ubuntu', sans-serif; }
+
+.userAllLabels {
+  padding-top: 5rem; }
+  .userAllLabels__title {
+    height: 5rem;
+    font-size: 2.4rem;
+    background-color: #060505;
+    color: #BD924B;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .userAllLabels__labels {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+    background-color: #060505; }
+    .userAllLabels__labels button {
+      text-decoration: none;
+      text-transform: none; }
+  .userAllLabels__mainLabel {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    margin-left: 2rem;
+    text-align: center;
+    font-size: 1.4rem;
+    align-items: center; }

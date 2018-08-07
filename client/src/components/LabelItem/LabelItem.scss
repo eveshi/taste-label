@@ -2,6 +2,7 @@
 
 .labelItem {
   position: relative;
+  height: 3rem;
   background-color: $color-primary-light;
   border: 1px ridge $color-secondary-dark;
   border-radius: .8rem;
@@ -9,7 +10,7 @@
 
   &__item {
     padding: .5rem 2rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   &__close {
@@ -21,6 +22,7 @@
     border: none;
     background: transparent;
     color: $color-secondary-darker;
+    cursor: pointer;
     @include transitionSpeed(fast);
 
     &:focus {

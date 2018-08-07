@@ -9,10 +9,18 @@ const LabelItem = (props) => {
     showClose,
   } = props;
 
-  let closeClass = classes.labelItem__close;
+  let closeDisplay = (
+    <button
+      className={classes.labelItem__close}
+      type="button"
+      onClick={onClick}
+    >
+      &Chi;
+    </button>
+  );
 
   if (showClose === false) {
-    closeClass = classes.displayNone;
+    closeDisplay = null;
   }
 
   return (
@@ -20,13 +28,7 @@ const LabelItem = (props) => {
       <p className={classes.labelItem__item}>
         {labelItem}
       </p>
-      <button
-        className={closeClass}
-        type="button"
-        onClick={onClick}
-      >
-        &Chi;
-      </button>
+      {closeDisplay}
     </div>
   );
 };
