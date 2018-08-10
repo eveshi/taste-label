@@ -1,3 +1,17 @@
+.inputAlert, .signUpBox__emailNotValid, .signUpBox__passwordNotValid, .signUpBox__usernameNotValid, .signUpBox__repeatPasswordNotValid {
+  position: relative; }
+  .inputAlert input, .signUpBox__emailNotValid input, .signUpBox__passwordNotValid input, .signUpBox__usernameNotValid input, .signUpBox__repeatPasswordNotValid input {
+    border-bottom: 2px solid red; }
+  .inputAlert::after, .signUpBox__emailNotValid::after, .signUpBox__passwordNotValid::after, .signUpBox__usernameNotValid::after, .signUpBox__repeatPasswordNotValid::after {
+    color: red;
+    height: 1.4rem;
+    width: 15rem;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    text-align: right; }
+
 *,
 *::after,
 *::before {
@@ -34,17 +48,6 @@ body {
     .signUpBox__input input, .signUpBox__emailNotValid input, .signUpBox__passwordNotValid input, .signUpBox__usernameNotValid input, .signUpBox__repeatPasswordNotValid input {
       width: 15rem;
       margin: 1rem 0; }
-  .signUpBox__emailNotValid input, .signUpBox__passwordNotValid input, .signUpBox__usernameNotValid input, .signUpBox__repeatPasswordNotValid input {
-    border-bottom: 2px solid #027D76; }
-  .signUpBox__emailNotValid::after, .signUpBox__passwordNotValid::after, .signUpBox__usernameNotValid::after, .signUpBox__repeatPasswordNotValid::after {
-    color: #027D76;
-    height: 1.4rem;
-    width: 15rem;
-    font-size: 1.2rem;
-    position: absolute;
-    bottom: -5px;
-    right: 0;
-    text-align: right; }
   .signUpBox__emailNotValid::after {
     content: 'email address is not valid'; }
   .signUpBox__passwordNotValid::after {

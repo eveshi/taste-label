@@ -1,0 +1,62 @@
+@import '../../stylesheets/main.scss';
+
+.artistDetails {
+  padding-top: $toolBar-height;
+  display: grid;
+  grid-template-columns: $leftbar-width 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 2.5rem;
+  align-items: center;
+
+  &__details {
+    height: 100%;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background-color: $color-primary-light;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 2rem;
+
+    img {
+      height: 200px;
+      width: 200px;
+      object-fit: cover;
+      align-self: center;
+      margin-bottom: 2rem;
+    }
+
+    &__text {
+      font-size: 1.4rem;
+
+      & > * {
+        margin-top: 1rem;
+      }
+
+      &_name {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  &__discography{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    &_title {
+      font-size: 1.6rem;
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid $color-primary-dark;
+    }
+
+    &_albums {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 2rem;
+    }
+  }
+}

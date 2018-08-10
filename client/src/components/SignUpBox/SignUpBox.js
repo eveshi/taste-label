@@ -19,6 +19,7 @@ const SignUpBox = (props) => {
     isRepeatPasswordValid,
     repeatPasswordChangeHandler,
     submitTrigger,
+    submitDisabled,
   } = props;
 
   let emailValidationClass = classes.signUpBox__input;
@@ -91,7 +92,10 @@ const SignUpBox = (props) => {
         />
       </div>
       <div className={classes.signUpBox__button}>
-        <Button onClick={submitTrigger}>
+        <Button
+          onClick={submitTrigger}
+          disabled={submitDisabled}
+        >
           Sign Up
         </Button>
       </div>
@@ -113,6 +117,7 @@ SignUpBox.propTypes = {
   isRepeatPasswordValid: PropTypes.bool.isRequired,
   repeatPasswordChangeHandler: PropTypes.func.isRequired,
   submitTrigger: PropTypes.func.isRequired,
+  submitDisabled: PropTypes.string.isRequired,
 };
 
 export default SignUpBox;

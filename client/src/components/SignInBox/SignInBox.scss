@@ -32,20 +32,7 @@
 
   &__emailNotValid,
   &__passwordNotValid {
-    input {
-      border-bottom: 2px solid $color-green;
-    }
-
-    &::after {
-      color: $color-green;
-      height: 1.4rem;
-      width: 15rem;
-      font-size: 1.2rem;
-      position: absolute;
-      bottom: -5px;
-      right: 0;
-      text-align: right;
-    }
+    @extend .inputAlert;
   }
 
   &__emailNotValid {

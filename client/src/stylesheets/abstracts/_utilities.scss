@@ -1,0 +1,18 @@
+.inputAlert {
+  position: relative;
+
+  input {
+    border-bottom: 2px solid red;
+  }
+
+  &::after {
+    color: red;
+    height: 1.4rem;
+    width: 15rem;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    text-align: right;
+  }
+}

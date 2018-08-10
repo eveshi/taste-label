@@ -22,6 +22,8 @@ class UserSign extends PureComponent {
     signUpButtonStatus: classes.button_notActive,
     showSignIn: null,
     showSignUp: classes.notShow,
+    signInSubmitDisabled: 'disabled',
+    signUpSubmitDisabled: 'disabled',
   };
 
   signInEmailChangeHandler = (event) => {
@@ -168,6 +170,8 @@ class UserSign extends PureComponent {
       signUpButtonStatus,
       showSignIn,
       showSignUp,
+      signInSubmitDisabled,
+      signUpSubmitDisabled,
     } = this.state;
 
     const {
@@ -204,6 +208,7 @@ class UserSign extends PureComponent {
               password={signInPassword}
               isPasswordValid={isSignInPasswordValid}
               passwordChangeHandler={event => signInPasswordChangeHandler(event)}
+              submitDisabled={signInSubmitDisabled}
             />
           </div>
           <div className={showSignUp}>
@@ -220,6 +225,7 @@ class UserSign extends PureComponent {
               repeatPassword={signUpRepeatPassword}
               isRepeatPasswordValid={isSignUpRepeatPasswordValid}
               repeatPasswordChangeHandler={event => signUpRepeatPasswordChangeHandler(event)}
+              submitDisabled={signUpSubmitDisabled}
             />
           </div>
         </div>

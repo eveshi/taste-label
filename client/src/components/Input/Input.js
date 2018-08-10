@@ -29,13 +29,14 @@ Input.propTypes = {
   maxLength: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
-  onKeyPress: PropTypes.func.isRequired,
+  onKeyPress: PropTypes.func,
   onChange: PropTypes.func.isRequired,
   type: PropTypes.string,
 };
 
 Input.defaultProps = {
   type: 'text',
+  onKeyPress: null,
 };
 
 export default Input;

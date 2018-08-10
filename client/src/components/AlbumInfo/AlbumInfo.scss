@@ -10,6 +10,7 @@
   align-items: center;
 
   &__leftbar {
+    height: 100%;
     grid-column: 1 / 2;
     border-right: 2px dotted $color-secondary-middle;
     background-color: $color-primary-light;

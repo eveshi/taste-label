@@ -1,0 +1,71 @@
+.inputAlert {
+  position: relative; }
+  .inputAlert input {
+    border-bottom: 2px solid red; }
+  .inputAlert::after {
+    color: red;
+    height: 1.4rem;
+    width: 15rem;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    text-align: right; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 400px) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: 'Ubuntu', sans-serif; }
+
+.artistDetails {
+  padding-top: 5rem;
+  display: grid;
+  grid-template-columns: 30rem 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 2.5rem;
+  align-items: center; }
+  .artistDetails__details {
+    height: 100%;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background-color: #F5F5F4;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem; }
+    .artistDetails__details img {
+      height: 200px;
+      width: 200px;
+      object-fit: cover;
+      align-self: center;
+      margin-bottom: 2rem; }
+    .artistDetails__details__text {
+      font-size: 1.4rem; }
+      .artistDetails__details__text > * {
+        margin-top: 1rem; }
+      .artistDetails__details__text_name {
+        font-size: 1.8rem; }
+  .artistDetails__discography {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2; }
+    .artistDetails__discography_title {
+      font-size: 1.6rem;
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #060505; }
+    .artistDetails__discography_albums {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 2rem; }

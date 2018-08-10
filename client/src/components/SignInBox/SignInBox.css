@@ -1,3 +1,17 @@
+.inputAlert, .signInBox__emailNotValid, .signInBox__passwordNotValid {
+  position: relative; }
+  .inputAlert input, .signInBox__emailNotValid input, .signInBox__passwordNotValid input {
+    border-bottom: 2px solid red; }
+  .inputAlert::after, .signInBox__emailNotValid::after, .signInBox__passwordNotValid::after {
+    color: red;
+    height: 1.4rem;
+    width: 15rem;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    text-align: right; }
+
 *,
 *::after,
 *::before {
@@ -34,17 +48,6 @@ body {
     .signInBox__input input, .signInBox__emailNotValid input, .signInBox__passwordNotValid input {
       width: 15rem;
       margin: 1rem 0; }
-  .signInBox__emailNotValid input, .signInBox__passwordNotValid input {
-    border-bottom: 2px solid #027D76; }
-  .signInBox__emailNotValid::after, .signInBox__passwordNotValid::after {
-    color: #027D76;
-    height: 1.4rem;
-    width: 15rem;
-    font-size: 1.2rem;
-    position: absolute;
-    bottom: -5px;
-    right: 0;
-    text-align: right; }
   .signInBox__emailNotValid::after {
     content: 'email address is not valid'; }
   .signInBox__passwordNotValid::after {

@@ -14,6 +14,7 @@ const SignInBox = (props) => {
     passwordChangeHandler,
     isPasswordValid,
     submitTrigger,
+    submitDisabled,
   } = props;
 
   let emailValidationClass = classes.signInBox__input;
@@ -53,7 +54,7 @@ const SignInBox = (props) => {
         />
       </div>
       <div className={classes.signInBox__button}>
-        <Button>
+        <Button disabled={submitDisabled}>
           Sign In
         </Button>
         <div className={classes.signInBox__button_forgetPassword}>
@@ -74,6 +75,7 @@ SignInBox.propTypes = {
   isPasswordValid: PropTypes.bool.isRequired,
   passwordChangeHandler: PropTypes.func.isRequired,
   submitTrigger: PropTypes.func.isRequired,
+  submitDisabled: PropTypes.string.isRequired,
 };
 
 export default SignInBox;
