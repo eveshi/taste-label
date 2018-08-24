@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent } from '../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
 import AlbumInfo from '../../components/AlbumInfo/AlbumInfo';
 import RatingBar from '../../components/RatingBar/RatingBar';
 import classes from './AlbumDetails.css';

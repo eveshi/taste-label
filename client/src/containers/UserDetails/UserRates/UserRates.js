@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from '../../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
+import PropTypes from '../../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/prop-types';
 import SmallTitleBar from '../../../components/SmallTitleBar/SmallTitleBar';
 import SingleItem from '../../../components/SingleItem/SingleItem';
 import classes from './UserRates.css';

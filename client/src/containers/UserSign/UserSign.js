@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent } from '../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
 import SignInBox from '../../components/SignInBox/SignInBox';
 import SignUpBox from '../../components/SignUpBox/SignUpBox';
 import classes from './UserSign.css';

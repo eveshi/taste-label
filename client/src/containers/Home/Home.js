@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent } from '../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
 import Intro from './Intro/Intro';
 import ChartRow from './ChartRow/ChartRow';
 import classes from './Home.css';

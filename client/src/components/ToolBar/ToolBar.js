@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent } from '../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
 import Home from '../../assets/icon/home';
 import User from '../../assets/icon/user';
 import SearchBox from '../SearchBox/SearchBox';

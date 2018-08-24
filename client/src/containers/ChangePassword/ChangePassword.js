@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent } from '../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
 import Input from '../../components/Input/Input';
 import Button from '../../components/Button/Button';
 import classes from './ChangePassword.css';

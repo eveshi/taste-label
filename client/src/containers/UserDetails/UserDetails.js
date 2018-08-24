@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent } from '../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
 import UserLabels from './UserLabels/UserLabels';
 import UserRates from './UserRates/UserRates';
 import NoBorderButton from '../../components/NoBorderButton/NoBorderButton';
