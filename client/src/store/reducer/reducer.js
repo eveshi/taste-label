@@ -25,7 +25,7 @@ const updateComment = (state, action) => {
 };
 
 const reducer = (state = initialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case actionTypes.LOG_IN:
     case actionTypes.LOG_OUT:
       return updateUser(state, action);

@@ -1,4 +1,6 @@
-import React, { PureComponent } from '../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
+import React, { PureComponent } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import UserLabels from './UserLabels/UserLabels';
 import UserRates from './UserRates/UserRates';
 import NoBorderButton from '../../components/NoBorderButton/NoBorderButton';
@@ -21,6 +23,19 @@ class UserDetails extends PureComponent {
       'comme on i want more',
     ],
     albums,
+  }
+
+  componentWillMount() {
+    const {
+      user,
+    } = this.props;
+
+    this.setState({
+      name: user.name,
+      email: user.email,
+      labels: user.labels,
+      albums: user.albums,
+    });
   }
 
   render() {
@@ -51,7 +66,23 @@ class UserDetails extends PureComponent {
   }
 }
 
-export default UserDetails;
+const mapStateToProps = state => ({
+  user: state.user,
+  comments: state.comments,
+});
+
+export default connect(mapStateToProps)(UserDetails);
+
+const user = {
+  name: '',
+  email: '',
+  labels: [],
+  albums: [],
+};
+
+UserDetails.propTypes = {
+  user: PropTypes.instanceOf(user).isRequired,
+};
 
 const albums = [
   {
