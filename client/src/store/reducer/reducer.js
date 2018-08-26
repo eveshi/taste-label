@@ -35,7 +35,7 @@ const reducer = (state = initialState, action) => {
     case actionTypes.DELETE_COMMENT:
       return updateComment(state, action);
     default:
-      break;
+      return state;
   }
 };
 

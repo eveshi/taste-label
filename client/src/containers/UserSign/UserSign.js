@@ -1,4 +1,7 @@
-import React, { PureComponent } from '../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
+import React, { PureComponent } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import * as actions from '../../store/actions/index';
 import SignInBox from '../../components/SignInBox/SignInBox';
 import SignUpBox from '../../components/SignUpBox/SignUpBox';
 import classes from './UserSign.css';
@@ -152,6 +155,19 @@ class UserSign extends PureComponent {
     });
   }
 
+  signinSubmit = () => {
+    const {
+      signInEmail,
+      signInPassword,
+    } = this.state;
+    const userInfo = {
+      signInEmail,
+      signInPassword,
+    };
+    const { login } = this.props;
+    login(userInfo);
+  }
+
   render() {
     const {
       signInEmail,
@@ -183,6 +199,7 @@ class UserSign extends PureComponent {
       signUpRepeatPasswordChangeHandler,
       showSignInHandler,
       showSignUpHandler,
+      signInSubmit,
     } = this;
 
     return (
@@ -209,6 +226,7 @@ class UserSign extends PureComponent {
               isPasswordValid={isSignInPasswordValid}
               passwordChangeHandler={event => signInPasswordChangeHandler(event)}
               submitDisabled={signInSubmitDisabled}
+              onClick={signInSubmit}
             />
           </div>
           <div className={showSignUp}>
@@ -234,4 +252,12 @@ class UserSign extends PureComponent {
   }
 }
 
-export default UserSign;
+UserSign.propTypes = {
+  login: PropTypes.func.isRequired,
+};
+
+const mapActionToProps = dispatch => ({
+  login: userInfo => dispatch(actions.login(userInfo)),
+});
+
+export default connect(null, mapActionToProps)(UserSign);

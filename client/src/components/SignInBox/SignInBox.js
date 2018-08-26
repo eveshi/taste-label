@@ -1,5 +1,5 @@
-import React from '../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
-import PropTypes from '../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
 import NoBorderButton from '../NoBorderButton/NoBorderButton';
@@ -15,6 +15,7 @@ const SignInBox = (props) => {
     isPasswordValid,
     submitTrigger,
     submitDisabled,
+    onClick,
   } = props;
 
   let emailValidationClass = classes.signInBox__input;
@@ -54,7 +55,10 @@ const SignInBox = (props) => {
         />
       </div>
       <div className={classes.signInBox__button}>
-        <Button disabled={submitDisabled}>
+        <Button
+          disabled={submitDisabled}
+          onClick={onClick}
+        >
           Sign In
         </Button>
         <div className={classes.signInBox__button_forgetPassword}>
@@ -76,6 +80,7 @@ SignInBox.propTypes = {
   passwordChangeHandler: PropTypes.func.isRequired,
   submitTrigger: PropTypes.func.isRequired,
   submitDisabled: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default SignInBox;
