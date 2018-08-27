@@ -30,15 +30,13 @@ This program is based on React.js. This is a website where you can rate every si
 - for mobile: 
 
 <div align="center">
-  <img width="300" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_home.png">
-  <img width="300" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_sign.png"> 
+  <img width="250" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_home.png">
+  <img width="250" style="margin-left:20px" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_sign.png"> 
+  <img width="250" style="margin-left:20px" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_album.png">
 </div>
 <div align="center">
-  <img width="300" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_album.png">
-  <img width="300" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_rate.png">
-</div>
-<div align="center">
-  <img width="300" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_rates.png">
+  <img width="250" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_rate.png">
+  <img width="250" style="margin-left:20px" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_rates.png">
 </div>
 
 
