@@ -2,7 +2,9 @@
 This program is based on React.js. This is a website where you can rate every single song of one album. 
 
 ### Setup
-You can download it and in terminal `cd client` and `npm start`, then in browser enter `http://localhost:3000` to see it.
+1. `git@github.com:eveshi/taste-label.git`
+2. Then, run `npm install`.
+3. Run `cd client` and `npm start` for the client. Then check https://localhost:3000.
 
 ### Preview
 
@@ -17,6 +19,7 @@ You can download it and in terminal `cd client` and `npm start`, then in browser
 
 - for mobile: 
 
-<img width="200" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_home.png"> <img width="200" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_sign.png"> <img width="200" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_album.png"> <img width="200" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_user.png"> <img width="200" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_rates.png">
+<img width="200" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_home.png"> <img width="200" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_sign.png"> <img width="200" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_album.png">
+<img width="200" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_rate.png"> <img width="200" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_user.png"> <img width="200" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_rates.png">
 
 
