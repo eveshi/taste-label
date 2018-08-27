@@ -1,5 +1,5 @@
-import React from '../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
-import PropTypes from '../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
 import classes from './SignUpBox.css';

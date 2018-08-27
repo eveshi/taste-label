@@ -10,18 +10,7 @@ class UserDetails extends PureComponent {
   state = {
     name: 'eve',
     email: 'play.sos@gmail.com',
-    labels: [
-      'abc',
-      'efg',
-      'hig',
-      'beautiful',
-      'house',
-      'trap',
-      'r&b',
-      'reall ycool staff',
-      'hate this',
-      'comme on i want more',
-    ],
+    labels: [],
     albums,
   }
 

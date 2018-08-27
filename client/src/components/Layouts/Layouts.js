@@ -1,5 +1,5 @@
-import React from '../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
-import PropTypes from '../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 import ToolBar from '../ToolBar/ToolBar';
 import Footer from '../Footer/Footer';
 import classes from './Layouts.css';

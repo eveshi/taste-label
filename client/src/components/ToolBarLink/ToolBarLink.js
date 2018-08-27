@@ -1,6 +1,6 @@
-import React from '../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
-import { Link } from '../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react-router-dom';
-import PropTypes from '../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/prop-types';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const ToolBarLink = (props) => {
   const {

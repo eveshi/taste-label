@@ -1,4 +1,6 @@
-import React, { PureComponent } from '../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import AlbumsDisplayWithPage from '../../components/AlbumsDisplayWithPage/AbumsDisplayWithPage';
 import classes from './UserAllRates.css';
 
@@ -7,6 +9,13 @@ class UserAllRates extends PureComponent {
     albums,
     page: 9,
     totalPage: 20,
+  }
+
+  componentWillMount() {
+    const { albums } = this.props;
+    this.setState({
+      albums,
+    });
   }
 
   render() {
@@ -34,7 +43,15 @@ class UserAllRates extends PureComponent {
   }
 }
 
-export default UserAllRates;
+const mapStateToProps = state => ({
+  albums: state.user.albums,
+});
+
+export default connect(mapStateToProps)(UserAllRates);
+
+UserAllRates.propTypes = {
+  albums: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 const albums = [
   {

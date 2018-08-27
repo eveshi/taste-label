@@ -1,5 +1,5 @@
-import React from '../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
-import { BrowserRouter, Route, Switch } from '../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react-router-dom';
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Layouts from './components/Layouts/Layouts';
 import Home from './containers/Home/Home';
 import AlbumDetails from './containers/AlbumDetails/AlbumDetails';

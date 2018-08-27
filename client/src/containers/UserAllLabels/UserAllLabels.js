@@ -1,4 +1,6 @@
-import React, { PureComponent } from '../../../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
+import React, { PureComponent } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import AlbumsDisplayWithPage from '../../components/AlbumsDisplayWithPage/AbumsDisplayWithPage';
 import LabelItem from '../../components/LabelItem/LabelItem';
 import NoBorderButton from '../../components/NoBorderButton/NoBorderButton';
@@ -6,11 +8,34 @@ import classes from './UserAllLabels.css';
 
 class UserAllLabels extends PureComponent {
   state = {
-    albums,
-    page: 8,
-    totalPage: 19,
-    labels,
-    labelDisplayed: 'intersting',
+    albums: [],
+    page: 1,
+    totalPage: 1,
+    labels: [],
+    labelDisplayed: 'interesting',
+  }
+
+  componentWillMount() {
+    const { albums, labels } = this.props;
+    const { labelDisplayed } = this.state;
+    const allAlbums = [...albums];
+    const albumsDisplay = [];
+    allAlbums.forEach((album) => {
+      let flag = false;
+      album.labels.forEach((label) => {
+        if (label === labelDisplayed) {
+          flag = true;
+        }
+      });
+      if (flag === true) {
+        albumsDisplay.push(album);
+      }
+      console.log(albumsDisplay);
+    });
+    this.setState({
+      labels,
+      albums: albumsDisplay,
+    });
   }
 
   render() {
@@ -23,7 +48,9 @@ class UserAllLabels extends PureComponent {
     } = this.state;
 
     const labelsDisplay = labels.map(label => (
-      <NoBorderButton key={label}>
+      <NoBorderButton
+        key={label}
+      >
         <LabelItem
           labelItem={label}
           showClose={false}
@@ -61,210 +88,14 @@ class UserAllLabels extends PureComponent {
   }
 }
 
-export default UserAllLabels;
+const mapStateToProps = state => ({
+  albums: state.user.albums,
+  labels: state.user.labels,
+});
 
-const albums = [
-  {
-    id: '1',
-    albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
-    ranking: '01',
-    albumName: 'Ten New Songs',
-    musician: 'Leonard Cohen',
-    userRate: 3,
-    rating: '9.0',
-  },
-  {
-    id: '2',
-    albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
-    ranking: '01',
-    albumName: 'Ten New Songs',
-    musician: 'Leonard Cohen',
-    userRate: 3,
-    rating: '9.0',
-  },
-  {
-    id: '3',
-    albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
-    ranking: '01',
-    albumName: 'Ten New Songs',
-    musician: 'Leonard Cohen',
-    userRate: 3,
-    rating: '9.0',
-  },
-  {
-    id: '4',
-    albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
-    ranking: '01',
-    albumName: 'Ten New Songs',
-    musician: 'Leonard Cohen',
-    userRate: 3,
-    rating: '9.0',
-  },
-  {
-    id: '5',
-    albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
-    ranking: '01',
-    albumName: 'Ten New Songs',
-    musician: 'Leonard Cohen',
-    userRate: 3,
-    rating: '9.0',
-  },
-  {
-    id: '6',
-    albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
-    ranking: '01',
-    albumName: 'Ten New Songs',
-    musician: 'Leonard Cohen',
-    userRate: 3,
-    rating: '9.0',
-  },
-  {
-    id: '7',
-    albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
-    ranking: '01',
-    albumName: 'Ten New Songs',
-    musician: 'Leonard Cohen',
-    userRate: 3,
-    rating: '9.0',
-  },
-  {
-    id: '8',
-    albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
-    ranking: '01',
-    albumName: 'Ten New Songs',
-    musician: 'Leonard Cohen',
-    userRate: 3,
-    rating: '9.0',
-  },
-  {
-    id: '9',
-    albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
-    ranking: '01',
-    albumName: 'Ten New Songs',
-    musician: 'Leonard Cohen',
-    userRate: 3,
-    rating: '9.0',
-  },
-  {
-    id: '10',
-    albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
-    ranking: '01',
-    albumName: 'Ten New Songs',
-    musician: 'Leonard Cohen',
-    userRate: 3,
-    rating: '9.0',
-  },
-  {
-    id: '11',
-    albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
-    ranking: '01',
-    albumName: 'Ten New Songs',
-    musician: 'Leonard Cohen',
-    userRate: 3,
-    rating: '9.0',
-  },
-  {
-    id: '12',
-    albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
-    ranking: '01',
-    albumName: 'Ten New Songs',
-    musician: 'Leonard Cohen',
-    userRate: 3,
-    rating: '9.0',
-  },
-  {
-    id: '13',
-    albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
-    ranking: '01',
-    albumName: 'Ten New Songs',
-    musician: 'Leonard Cohen',
-    userRate: 3,
-    rating: '9.0',
-  },
-  {
-    id: '14',
-    albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
-    ranking: '01',
-    albumName: 'Ten New Songs',
-    musician: 'Leonard Cohen',
-    userRate: 3,
-    rating: '9.0',
-  },
-  {
-    id: '15',
-    albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
-    ranking: '01',
-    albumName: 'Ten New Songs',
-    musician: 'Leonard Cohen',
-    userRate: 3,
-    rating: '9.0',
-  },
-  {
-    id: '16',
-    albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
-    ranking: '01',
-    albumName: 'Ten New Songs',
-    musician: 'Leonard Cohen',
-    userRate: 3,
-    rating: '9.0',
-  },
-  {
-    id: '17',
-    albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
-    ranking: '01',
-    albumName: 'Ten New Songs',
-    musician: 'Leonard Cohen',
-    userRate: 3,
-    rating: '9.0',
-  },
-  {
-    id: '18',
-    albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
-    ranking: '01',
-    albumName: 'Ten New Songs',
-    musician: 'Leonard Cohen',
-    userRate: 3,
-    rating: '9.0',
-  },
-  {
-    id: '19',
-    albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
-    ranking: '01',
-    albumName: 'Ten New Songs',
-    musician: 'Leonard Cohen',
-    userRate: 3,
-    rating: '9.0',
-  },
-  {
-    id: '20',
-    albumCoverSrc: 'https://www.leonardcohenfiles.com/tns-cover.jpg',
-    ranking: '01',
-    albumName: 'Ten New Songs',
-    musician: 'Leonard Cohen',
-    userRate: 3,
-    rating: '9.0',
-  },
-];
+export default connect(mapStateToProps)(UserAllLabels);
 
-const labels = [
-  'intersting',
-  'sad',
-  'for you',
-  'my tears',
-  'intersting',
-  'sad',
-  'for you',
-  'my tears',
-  'intersting',
-  'sad',
-  'for you',
-  'my tears',
-  'intersting',
-  'sad',
-  'for you',
-  'my tears',
-  'intersting',
-  'sad',
-  'for you',
-  'my tears',
-];
+UserAllLabels.propTypes = {
+  albums: PropTypes.arrayOf(PropTypes.object).isRequired,
+  labels: PropTypes.arrayOf(PropTypes.string).isRequired,
+};

@@ -257,7 +257,7 @@ UserSign.propTypes = {
 };
 
 const mapActionToProps = dispatch => ({
-  login: userInfo => dispatch(actions.login(userInfo)),
+  login: userInfo => dispatch(actions.LOG_IN(userInfo)),
 });
 
 export default connect(null, mapActionToProps)(UserSign);
