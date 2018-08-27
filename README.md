@@ -10,16 +10,35 @@ This program is based on React.js. This is a website where you can rate every si
 
 - for computer:
 
-<img src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/com_home.png">
-<img src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/com_sign.png">
-<img src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/com_album_comment.png">
-<img src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/com_user.png">
-<img src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/com_rates.png">
+<div align="center">
+  <img src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/com_home.png">
+</div>
+<div align='center'>
+  <img src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/com_sign.png">
+</div>
+<div align='center'>
+  <img src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/com_album_comment.png">
+</div>
+<div align='center'>
+  <img src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/com_user.png">
+</div>
+<div align='center'>
+  <img src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/com_rates.png">
+</div>
 
 
 - for mobile: 
 
-<img width="300" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_home.png"> <img width="300" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_sign.png"> <img width="300" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_album.png">
-<img width="300" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_rate.png"><img width="300" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_rates.png">
+<div align="center">
+  <img width="300" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_home.png">
+  <img width="300" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_sign.png"> 
+</div>
+<div align="center">
+  <img width="300" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_album.png">
+  <img width="300" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_rate.png">
+</div>
+<div align="center">
+  <img width="300" src="https://raw.githubusercontent.com/eveshi/taste-label/master/README_IMAGE/mobile_rates.png">
+</div>
 
 
